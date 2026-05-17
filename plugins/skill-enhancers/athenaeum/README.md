@@ -7,9 +7,9 @@ A dialectic skill pack for agent design, multi-agent reconciliation, and fleet-w
 ## Install
 
 ```bash
-npx skills add arbiter-org/dancer@athenaeum-design
-npx skills add arbiter-org/dancer@athenaeum-reconcile
-npx skills add arbiter-org/dancer@athenaeum-ratify
+npx skills add athenaeum-org/dancer@athenaeum-design
+npx skills add athenaeum-org/dancer@athenaeum-reconcile
+npx skills add athenaeum-org/dancer@athenaeum-ratify
 ```
 
 Or clone and symlink into your agent's `skills/` directory.

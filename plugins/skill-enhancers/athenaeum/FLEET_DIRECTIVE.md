@@ -22,7 +22,7 @@ Every completion must include:
 ## Agent-specific compliance
 
 - **Human-attended sessions** (Claude Code, Cursor, Gemini CLI, Codex): Write evidence to the repo/vault directly. Handoff files are acceptable for inter-session coordination.
-- **Arbiter autonomous workers**: Satisfy the evidence requirement via the `proof_of_work` schema (`pr_url`, `files_changed`, `caveats`, `test_results`). Handoff files are not required for isolated worker runs.
+- **Athenaeum autonomous workers**: Satisfy the evidence requirement via the `proof_of_work` schema (`pr_url`, `files_changed`, `caveats`, `test_results`). Handoff files are not required for isolated worker runs.
 - **All agents:** Verification must come from running the thing, not from reading the diff. You cannot observe yourself and call it measurement.
 
 ## Final standard

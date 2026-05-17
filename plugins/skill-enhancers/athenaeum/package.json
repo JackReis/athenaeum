@@ -12,10 +12,10 @@
     "athenaeum": "./scripts/athenaeum"
   },
   "author": {
-    "name": "Arbiter contributors",
+    "name": "Athenaeum contributors",
     "email": "jackareis@gmail.com"
   },
-  "repository": "https://github.com/JackReis/arbiter",
+  "repository": "https://github.com/JackReis/athenaeum",
   "license": "MIT",
   "keywords": [
     "dialectic",

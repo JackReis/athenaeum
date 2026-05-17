@@ -62,12 +62,12 @@ From the `dancer` marketplace:
 /plugin install autonomous-ai-agents@dancer
 ```
 
-The marketplace lives at `github:arbiter-org/dancer` (mirror at `gitlab:arbiter-org/dancer`). Register in `~/.claude/settings.json` under `extraKnownMarketplaces`.
+The marketplace lives at `github:athenaeum-org/dancer` (mirror at `gitlab:athenaeum-org/dancer`). Register in `~/.claude/settings.json` under `extraKnownMarketplaces`.
 
 Or load from a local path during development:
 
 ```
-/plugin install path:/path/to/arbiter/plugins/ai-agency/autonomous-ai-agents
+/plugin install path:/path/to/athenaeum/plugins/ai-agency/autonomous-ai-agents
 ```
 
 ## Hermes MCP setup

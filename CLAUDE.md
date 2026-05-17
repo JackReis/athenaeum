@@ -14,8 +14,8 @@ This repository inherits operational policy from:
 Keep only repo-specific build/test/deploy details below.
 
 ### Agentic OS schema boundary
-- Arbiter owns package/distribution metadata for plugin-packaged skills.
-- Arbiter's `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are package/runtime fields, not universal source-protocol requirements.
+- Athenaeum owns package/distribution metadata for plugin-packaged skills.
+- Athenaeum's `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are package/runtime fields, not universal source-protocol requirements.
 - Portable skill source protocols should keep `name` and `description` as the minimum unless a target adapter explicitly requires more fields.
 
 ---
@@ -720,7 +720,7 @@ Mandatory Requirement: Maintain immaculate session logs across ALL repositories 
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **arbiter** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **athenaeum** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -743,10 +743,10 @@ This project is indexed by GitNexus as **arbiter** (101360 symbols, 102995 relat
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/arbiter/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/arbiter/clusters` | All functional areas |
-| `gitnexus://repo/arbiter/processes` | All execution flows |
-| `gitnexus://repo/arbiter/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/athenaeum/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/athenaeum/clusters` | All functional areas |
+| `gitnexus://repo/athenaeum/processes` | All execution flows |
+| `gitnexus://repo/athenaeum/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

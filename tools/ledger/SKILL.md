@@ -22,7 +22,7 @@ Track what agents do, how long it takes, and what it costs.
 python3 ledger.py append token --agent kimi --model kimi-k2 --data '{"tokens_in": 16000, "tokens_out": 316, "task": "context review"}'
 
 # Log time
-python3 ledger.py append time --agent claude --data '{"duration": "01:30", "category": "design", "task": "arbiter mascot"}'
+python3 ledger.py append time --agent claude --data '{"duration": "01:30", "category": "design", "task": "athenaeum mascot"}'
 
 # Auto-populate commit log
 python3 ledger.py append-commit --repo /path/to/repo --count 10

@@ -3,7 +3,7 @@ name: peer-grill-with-agents
 description: Two (or more) agents independently audit the SAME existing agent stack against the codebase, then reconcile via the peer-grill file-based protocol. Each agent walks the same 13-branch agent-stack audit (grill-me-with-agents) on its own, dumps a claims.yaml grounded in concrete file paths, and the disagreements get ratified or escalated. Use when the agent topology is already implemented and you need multi-agent triangulation on whether a *change* to it is sound — single-agent grilling has known blind spots, peer-grill alone has no code anchor, this combines them. Triggers — "peer-grill the agent stack", "two agents audit the topology", "stress-test our agents from two angles", "triangulate the agent design", "reconcile our reading of the stack". Do NOT use for greenfield design (use `grill-me-agents`), for single-agent code-aware grilling (use `grill-me-with-agents`), or for non-agent state reconciliation (use `peer-grill`).
 ---
 
-> Flagship skill for the Arbiter orchestration package. Where `grill-me-with-agents` audits an implemented stack with one agent's lens, `peer-grill-with-agents` runs that audit through N agents in parallel and reconciles the deltas. The output is a multi-agent-ratified `AGENT_DESIGN.md` that no single model authored alone — the design has survived independent code-anchored interrogation by every peer.
+> Flagship skill for the Athenaeum orchestration package. Where `grill-me-with-agents` audits an implemented stack with one agent's lens, `peer-grill-with-agents` runs that audit through N agents in parallel and reconciles the deltas. The output is a multi-agent-ratified `AGENT_DESIGN.md` that no single model authored alone — the design has survived independent code-anchored interrogation by every peer.
 
 This skill is the dialectic protocol at agent-design scale. It composes two existing primitives without replacing them: the **13-branch audit** from `grill-me-with-agents` (what to read in the repo, in what order) and the **file-based reconciliation protocol** from `peer-grill` (claims → diff → grill → ratify → sign-off). Read both for full mechanics; this skill describes how they fit together.
 
@@ -21,7 +21,7 @@ Do NOT invoke when:
 
 ## Setup — ask the user before any writes
 
-1. **Topic slug** — what change or design is being grilled? e.g. `arbiter-rollout`, `hermes-demotion`, `pt-dissent-gate`. Default to `arbiter-rollout` if unspecified.
+1. **Topic slug** — what change or design is being grilled? e.g. `athenaeum-rollout`, `hermes-demotion`, `pt-dissent-gate`. Default to `athenaeum-rollout` if unspecified.
 2. **Identities** — what name is *this* agent? (`claude-opus-4-7`, `gemini-2.5-pro`, `gpt-5-codex`, etc.) What identities are the peers, and how do they invoke the skill (separate session, separate machine, manual prompt)?
 3. **Stack scope** — which subdirectories of `.claude/agents/`, `.claude/skills/`, `.claude/shared-agents/`, etc. are in scope? Anything outside is filtered out before diffing.
 4. **Round budget** — max grilling rounds per disputed branch before `ESCALATE` (default: 3, per `peer-grill`).
@@ -71,7 +71,7 @@ agent: <agent-name>
 session_started: <ISO8601>
 scope: [<stack-paths-in-scope>]
 claims:
-  - id: <stable-slug>            # e.g., arbiter-port, hermes-role, pt-dissent-gate
+  - id: <stable-slug>            # e.g., athenaeum-port, hermes-role, pt-dissent-gate
     branch: 1..13                # which branch this claim sits in
     statement: <one sentence>
     confidence: high | medium | low
@@ -166,4 +166,4 @@ For agent-stack audits, prefer 2-3 peers across model families (e.g., Opus + Gem
 
 ## Provenance
 
-This skill was authored as the flagship for the Arbiter orchestration package — the Arbiter design itself (`AGENT_DESIGN.md` at vault root) was produced by a single-agent run of `grill-me-with-agents`, and the natural next-iteration upgrade is multi-agent ratification. Lineage: `grill-me` → `grill-me-with-agents` → `peer-grill` → this skill. Each step adds rigor without discarding the prior level.
+This skill was authored as the flagship for the Athenaeum orchestration package — the Athenaeum design itself (`AGENT_DESIGN.md` at vault root) was produced by a single-agent run of `grill-me-with-agents`, and the natural next-iteration upgrade is multi-agent ratification. Lineage: `grill-me` → `grill-me-with-agents` → `peer-grill` → this skill. Each step adds rigor without discarding the prior level.

@@ -5,14 +5,14 @@
 
 ## Overview
 
-This repository contains plugin packs for Claude Code. Originally derived from the Jeremy Longshore marketplace (MIT-licensed), inherited upstream plugins were removed on 2026-05-16. Arbiter now ships only original contributions.
+This repository contains plugin packs for Claude Code. Originally derived from the Jeremy Longshore marketplace (MIT-licensed), inherited upstream plugins were removed on 2026-05-16. Athenaeum now ships only original contributions.
 
 ## Fleet Directive
 
 All agents working in this repo must follow the **Fleet Directive — Durable Evidence**:
 `~/Documents/=notes/docs/conventions/fleet-directive.md`
 
-Done = artifact + path + verification + commit + push + caveats. The evidence, not the vocabulary, is what distinguishes measurement from theatre. Autonomous workers under Arbiter satisfy evidence via `proof_of_work` schema, not handoff files.
+Done = artifact + path + verification + commit + push + caveats. The evidence, not the vocabulary, is what distinguishes measurement from theatre. Autonomous workers under Athenaeum satisfy evidence via `proof_of_work` schema, not handoff files.
 
 ## Plugin Packs
 
@@ -26,9 +26,9 @@ Done = artifact + path + verification + commit + push + caveats. The evidence, n
 
 ## 2025 Schema Compliance
 
-All Arbiter-packaged skills follow the 2025 schema. The portable minimum across Superpowers, user skills, vault skills, and package-installed skills is `name` plus `description`; `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are adapter/package fields unless a target runtime explicitly requires them.
+All Athenaeum-packaged skills follow the 2025 schema. The portable minimum across Superpowers, user skills, vault skills, and package-installed skills is `name` plus `description`; `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are adapter/package fields unless a target runtime explicitly requires them.
 
-### Arbiter Package Fields
+### Athenaeum Package Fields
 
 ```yaml
 ---
@@ -37,8 +37,8 @@ description: |                      # Clear "what" and "when", max 1024 chars
   What this skill does and when to use it.
   Include trigger phrases like "analyze performance" or "optimize code"
   so users know when this skill will activate.
-allowed-tools: Read, Write, Bash    # Arbiter package/runtime field
-version: 1.0.0                      # Arbiter package/runtime field
+allowed-tools: Read, Write, Bash    # Athenaeum package/runtime field
+version: 1.0.0                      # Athenaeum package/runtime field
 ---
 ```
 
@@ -68,7 +68,7 @@ version: 1.0.0                      # Arbiter package/runtime field
 
 ## Resources
 
-- **Repository**: https://github.com/arbiter-dev/arbiter
+- **Repository**: https://github.com/athenaeum-dev/athenaeum
 
 ## Repository Remote Policy
 - Repo policy: GitHub is primary `origin` and CI/CD source; GitLab is backup remote (`gitlab`) with GitLab CI disabled.
@@ -76,7 +76,7 @@ version: 1.0.0                      # Arbiter package/runtime field
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **arbiter** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **athenaeum** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -99,10 +99,10 @@ This project is indexed by GitNexus as **arbiter** (101360 symbols, 102995 relat
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/arbiter/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/arbiter/clusters` | All functional areas |
-| `gitnexus://repo/arbiter/processes` | All execution flows |
-| `gitnexus://repo/arbiter/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/athenaeum/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/athenaeum/clusters` | All functional areas |
+| `gitnexus://repo/athenaeum/processes` | All execution flows |
+| `gitnexus://repo/athenaeum/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

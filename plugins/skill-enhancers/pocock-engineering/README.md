@@ -17,7 +17,7 @@ Engineering lifecycle skills forked from Matt Pocock's framework, adapted for th
 
 ## Attribution
 
-These skills originate from [Matt Pocock's skill framework](https://github.com/anthropics/claude-code-plugins), forked and adapted by Arbiter contributors. The original framework is MIT-licensed.
+These skills originate from [Matt Pocock's skill framework](https://github.com/anthropics/claude-code-plugins), forked and adapted by Athenaeum contributors. The original framework is MIT-licensed.
 
 ## Installation
 

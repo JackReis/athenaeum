@@ -69,7 +69,7 @@ SAMPLE_TOKEN_ENTRIES = textwrap.dedent("""\
 - **Tokens In:** 50000
 - **Tokens Out:** 12000
 - **Cost:** $0.33
-- **Task:** arbiter sentry integration
+- **Task:** athenaeum sentry integration
 
 ### 2026-05-11T09:00:00Z
 - **Agent:** kimi
@@ -577,7 +577,7 @@ class TestRealFormatCompat:
             - **Tokens In:** 50000
             - **Tokens Out:** 12000
             - **Cost:** $0.33
-            - **Task:** arbiter sentry
+            - **Task:** athenaeum sentry
         """)
         entries = L._parse_entries("token", real_content)
         # "Session: kimi-claw..." heading doesn't match ISO date pattern,

@@ -1,14 +1,14 @@
 {
   "name": "dancer",
   "owner": {
-    "name": "Arbiter contributors",
+    "name": "Athenaeum contributors",
     "email": "[email protected]",
     "url": "https://github.com/JackReis"
   },
   "metadata": {
-    "description": "Arbiter contributors's Claude Code plugin and skill marketplace",
+    "description": "Athenaeum contributors's Claude Code plugin and skill marketplace",
     "version": "1.4.0",
-    "homepage": "https://github.com/JackReis/arbiter",
+    "homepage": "https://github.com/JackReis/athenaeum",
     "pluginRoot": "./plugins",
     "totalPlugins": 5,
     "skillsEnabled": 26,
@@ -48,7 +48,7 @@
         "fleet-ratify"
       ],
       "author": {
-        "name": "Arbiter contributors",
+        "name": "Athenaeum contributors",
         "email": "jackareis@gmail.com"
       },
       "license": "MIT"
@@ -61,7 +61,7 @@
       "category": "ai-agency",
       "keywords": [],
       "author": {
-        "name": "Arbiter contributors",
+        "name": "Athenaeum contributors",
         "email": "jackareis@gmail.com"
       }
     },
@@ -89,11 +89,11 @@
         "fleet-topology"
       ],
       "author": {
-        "name": "Arbiter contributors",
+        "name": "Athenaeum contributors",
         "email": "jackareis@gmail.com"
       },
       "license": "MIT",
-      "repository": "https://github.com/JackReis/arbiter",
+      "repository": "https://github.com/JackReis/athenaeum",
       "tier": "free",
       "status": "active"
     },
@@ -116,11 +116,11 @@
         "byom"
       ],
       "author": {
-        "name": "Arbiter contributors",
+        "name": "Athenaeum contributors",
         "email": "jackareis@gmail.com"
       },
       "license": "MIT",
-      "repository": "https://github.com/JackReis/arbiter",
+      "repository": "https://github.com/JackReis/athenaeum",
       "tier": "free",
       "status": "active"
     },
@@ -144,11 +144,11 @@
         "byom"
       ],
       "author": {
-        "name": "Arbiter contributors",
+        "name": "Athenaeum contributors",
         "email": "jackareis@gmail.com"
       },
       "license": "MIT",
-      "repository": "https://github.com/JackReis/arbiter",
+      "repository": "https://github.com/JackReis/athenaeum",
       "tier": "free",
       "status": "active"
     }

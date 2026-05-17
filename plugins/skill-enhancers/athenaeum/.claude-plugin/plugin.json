@@ -3,10 +3,10 @@
   "version": "0.2.0",
   "description": "Streamlined dialectic skill pack for agent design, multi-agent reconciliation, fleet-wide attestation, and code-aware agent-stack audit. Consolidates the grill-each-other patterns into 4 focused skills (design, reconcile, ratify, audit) with progressive disclosure, cross-agent runtime detection, and a unified CLI. The opinionated, quick-start path — use grill-each-other for modular composition.",
   "author": {
-    "name": "Arbiter contributors",
+    "name": "Athenaeum contributors",
     "email": "jackareis@gmail.com"
   },
-  "repository": "https://github.com/JackReis/arbiter",
+  "repository": "https://github.com/JackReis/athenaeum",
   "license": "MIT",
   "keywords": [
     "dialectic",

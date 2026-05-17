@@ -292,8 +292,8 @@ Permutation emits structured payloads to n8n at each protocol step. Here are exa
 
 ```
 n8n trigger: Linear webhook (new agent label added to fleet ticket)
-  → n8n: POST /dispatch to Arbiter with target=permutation-initiator
-  → Arbiter: permutation init --roster existing-agents,new-agent --topic onboarding-YYYY-MM-DD
+  → n8n: POST /dispatch to Athenaeum with target=permutation-initiator
+  → Athenaeum: permutation init --roster existing-agents,new-agent --topic onboarding-YYYY-MM-DD
   → Each agent: fills .row.yaml
   → n8n: POST /events permutation.discover (per-agent webhook)
   → Merge writer: permutation cross-check
@@ -307,8 +307,8 @@ n8n trigger: Linear webhook (new agent label added to fleet ticket)
 
 ```
 n8n trigger: Schedule (quarterly) or manual (fleet topology stale)
-  → n8n: POST /dispatch to Arbiter with target=permutation-initiator
-  → Arbiter: permutation init --roster opencode,neo,kimi-code,hermes --topic quarterly-topology
+  → n8n: POST /dispatch to Athenaeum with target=permutation-initiator
+  → Athenaeum: permutation init --roster opencode,neo,kimi-code,hermes --topic quarterly-topology
   → [permutation protocol runs — discover, cross-check, ratify, finalize]
   → n8n: receives permutation.finalize payload
   → n8n: extracts roster.yaml → seeds athenaeum-audit init
@@ -323,8 +323,8 @@ n8n trigger: Schedule (quarterly) or manual (fleet topology stale)
 
 ```
 n8n trigger: Webhook (agent role/config updated in fleet config)
-  → n8n: POST /dispatch to Arbiter
-  → Arbiter: permutation init --roster full-fleet --topic role-change-YYYY-MM-DD
+  → n8n: POST /dispatch to Athenaeum
+  → Athenaeum: permutation init --roster full-fleet --topic role-change-YYYY-MM-DD
   → [quick mode: agents only update rows for pairs affected by the role change]
   → n8n: permutation.finalize payload
   → n8n: diff against previous ratified-matrix.json
@@ -340,7 +340,7 @@ n8n trigger: Webhook (agent role/config updated in fleet config)
   "topic": "onboarding-2026-05-17",
   "event": "init",
   "timestamp": "2026-05-17T10:00:00Z",
-  "agent": "arbiter",
+  "agent": "athenaeum",
   "payload": {
     "roster": ["opencode", "neo", "kimi-code", "hermes", "zoe"],
     "working_dir": ".permutation/onboarding-2026-05-17/",
