@@ -128,6 +128,10 @@ All agents working in this repo follow the **Fleet Directive — Durable Evidenc
 
 ---
 
+<p align="center">
+  <img src="docs/assets/arbiter-robot-toga.svg" alt="Arbiter — robot in a toga" width="200">
+</p>
+
 ## License
 
 Each pack carries its own LICENSE. Original contributions: MIT. Pocock-derived packs: MIT (original copyright Matt Pocock). See [NOTICE](NOTICE) for attribution.
