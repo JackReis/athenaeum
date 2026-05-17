@@ -75,7 +75,7 @@ def main() -> int:
         try:
             import yaml  # type: ignore
         except ImportError:
-            sys.stderr.write("ERR: --batch requires PyYAML. Try /Users/jack.reis/.mcp-venv/bin/python3.\n")
+            sys.stderr.write("ERR: --batch requires PyYAML. Try: python3 -m pip install pyyaml\n")
             return 2
         path = Path(args.input).resolve()
         if not path.is_file():

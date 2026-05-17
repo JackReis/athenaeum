@@ -1,9 +1,9 @@
 ## Inheritance Model (Folder-First)
 
 This repository inherits operational policy from:
-- Global baseline: `/Users/jack.reis/Documents/=notes/CLAUDE.md`
-- Domain contract: `/Users/jack.reis/Documents/=notes/claude/contracts/DOMAIN-PLUGINS-AGENTS.md`
-- Plugin schema policy: `/Users/jack.reis/Documents/=notes/docs/architecture/plugin-capability-schema-policy.md`
+- Global baseline: `~/Documents/=notes/CLAUDE.md`
+- Domain contract: `~/Documents/=notes/claude/contracts/DOMAIN-PLUGINS-AGENTS.md`
+- Plugin schema policy: `~/Documents/=notes/docs/architecture/plugin-capability-schema-policy.md`
 
 ### Default complex-task behavior
 - Plan first using `superpowers:writing-plans`
@@ -14,8 +14,8 @@ This repository inherits operational policy from:
 Keep only repo-specific build/test/deploy details below.
 
 ### Agentic OS schema boundary
-- Dancer owns package/distribution metadata for plugin-packaged skills.
-- Dancer's `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are package/runtime fields, not universal source-protocol requirements.
+- Arbiter owns package/distribution metadata for plugin-packaged skills.
+- Arbiter's `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are package/runtime fields, not universal source-protocol requirements.
 - Portable skill source protocols should keep `name` and `description` as the minimum unless a target adapter explicitly requires more fields.
 
 ---
@@ -274,7 +274,7 @@ Scripts follow a categorized naming convention in flat structure:
 - **Auditing**: `audit-*.sh` - Plugin manifest and structure auditing
 - **Fixes**: `fix-*.sh/py` - Automated fixes for common issues
 - **Migration**: `migrate-*.sh/py` - Schema and structure migrations
-- **Utilities**: `util-*.sh/py/pl` - General utilities (e.g., emoji removal)
+- **Utilities**: `util-*.sh/py/pl` - General utilities (e.g. emoji removal)
 - **Enhancement**: `enhance-*.sh` - Plugin enhancements
 - **Automation**: `automation-*.sh` - CI/CD automation scripts
 
@@ -689,15 +689,15 @@ git push origin main --tags
 
 ## Portfolio Context
 
-This repo is part of an 18-repo portfolio coordinated from the `=notes` vault.
+This repo is part of a multi-repository ecosystem coordinated from the `=notes` vault.
 
-- **Role**: Plugin marketplace fork providing 253+ plugins to all Claude Code sessions
+- **Role**: Plugin marketplace providing 253+ plugins to Claude Code sessions
 - **Coordination**: See `=notes/REPOSITORY-MAP.md` for full dependency graph
 - **Relationships**:
-  - Plugins used by → all repos in the portfolio via Claude Code plugin system
-  - Complements → `superpowers` skills framework (`/Users/jack.reis/Documents/superpowers/`)
-  - Coordinated from → `=notes` vault (`/Users/jack.reis/Documents/=notes/`)
-  - Automated by → `tonkotsu-automation` (`/Users/jack.reis/Documents/tonkotsu-automation/`)
+  - Plugins used by → all repos in the ecosystem via Claude Code plugin system
+  - Complements → `superpowers` skills framework (`~/Documents/superpowers/`)
+  - Coordinated from → `=notes` vault (`~/Documents/=notes/`)
+  - Automated by → `tonkotsu-automation` (`~/Documents/tonkotsu-automation/`)
 
 ## Repository Remote Policy
 - Repo policy: GitHub is primary `origin` and CI/CD source; GitLab is backup remote (`gitlab`) with GitLab CI disabled.
@@ -720,7 +720,7 @@ Mandatory Requirement: Maintain immaculate session logs across ALL repositories 
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **dancer** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **arbiter** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -743,10 +743,10 @@ This project is indexed by GitNexus as **dancer** (101360 symbols, 102995 relati
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/dancer/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/dancer/clusters` | All functional areas |
-| `gitnexus://repo/dancer/processes` | All execution flows |
-| `gitnexus://repo/dancer/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/arbiter/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/arbiter/clusters` | All functional areas |
+| `gitnexus://repo/arbiter/processes` | All execution flows |
+| `gitnexus://repo/arbiter/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

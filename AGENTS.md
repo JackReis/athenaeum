@@ -1,11 +1,11 @@
 # Agent Skills System
 
 **Last Updated:** May 16, 2026
-**Current Status:** 5 Jack-authored plugin packs, 26 skills total
+**Current Status:** 5 original plugin packs, 26 skills total
 
 ## Overview
 
-This repository contains **Jack Reis's own plugin packs** for Claude Code. Originally forked from the Jeremy Longshore marketplace (MIT-licensed), the inherited upstream plugins were removed on 2026-05-16. Dancer now ships only Jack-authored contributions.
+This repository contains plugin packs for Claude Code. Originally derived from the Jeremy Longshore marketplace (MIT-licensed), inherited upstream plugins were removed on 2026-05-16. Arbiter now ships only original contributions.
 
 ## Fleet Directive
 
@@ -21,14 +21,14 @@ Done = artifact + path + verification + commit + push + caveats. The evidence, n
 | `autonomous-ai-agents` v0.4.0 | ai-agency | 3 + 2 MCP bridges | Fleet coordination: identity, hermes-bridge, openclaw-bridge |
 | `grill-each-other` v1.3.1 | skill-enhancers | 10 | Dialectic claim discipline: grill-me, peer-grill, fleet-ratify, permutation, etc. |
 | `athenaeum` v0.2.0 | skill-enhancers | 4 | Streamlined dialectic: design, reconcile, ratify, audit (curated alternative to grill-each-other) |
-| `leonardo` v1.1.0 | ai-agency | 1 | Protected-string decoder with Discord audit |
+| `leonardo` v1.1.0 | ai-agency | 1 | Protected-string decoder with audit trail |
 | `pocock-engineering` v1.0.0 | skill-enhancers | 8 | SDLC skills forked from Matt Pocock's framework |
 
 ## 2025 Schema Compliance
 
-All Dancer-packaged skills follow the 2025 schema. The portable minimum across Superpowers, user skills, vault skills, and package-installed skills is `name` plus `description`; `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are adapter/package fields unless a target runtime explicitly requires them.
+All Arbiter-packaged skills follow the 2025 schema. The portable minimum across Superpowers, user skills, vault skills, and package-installed skills is `name` plus `description`; `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries are adapter/package fields unless a target runtime explicitly requires them.
 
-### Dancer Package Fields
+### Arbiter Package Fields
 
 ```yaml
 ---
@@ -37,8 +37,8 @@ description: |                      # Clear "what" and "when", max 1024 chars
   What this skill does and when to use it.
   Include trigger phrases like "analyze performance" or "optimize code"
   so users know when this skill will activate.
-allowed-tools: Read, Write, Bash    # Dancer package/runtime field
-version: 1.0.0                      # Dancer package/runtime field
+allowed-tools: Read, Write, Bash    # Arbiter package/runtime field
+version: 1.0.0                      # Arbiter package/runtime field
 ---
 ```
 
@@ -68,7 +68,7 @@ version: 1.0.0                      # Dancer package/runtime field
 
 ## Resources
 
-- **Repository**: https://github.com/JackReis/dancer
+- **Repository**: https://github.com/arbiter-dev/arbiter
 
 ## Repository Remote Policy
 - Repo policy: GitHub is primary `origin` and CI/CD source; GitLab is backup remote (`gitlab`) with GitLab CI disabled.
@@ -76,7 +76,7 @@ version: 1.0.0                      # Dancer package/runtime field
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **dancer** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **arbiter** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -99,10 +99,10 @@ This project is indexed by GitNexus as **dancer** (101360 symbols, 102995 relati
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/dancer/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/dancer/clusters` | All functional areas |
-| `gitnexus://repo/dancer/processes` | All execution flows |
-| `gitnexus://repo/dancer/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/arbiter/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/arbiter/clusters` | All functional areas |
+| `gitnexus://repo/arbiter/processes` | All execution flows |
+| `gitnexus://repo/arbiter/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

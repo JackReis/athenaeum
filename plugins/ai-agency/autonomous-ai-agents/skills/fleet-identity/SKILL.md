@@ -7,12 +7,12 @@ description: This skill should be used when the user asks "who is Wings", "who i
 
 ## Overview
 
-Jack's autonomous-AI-agent fleet separates two things:
+the autonomous AI agent fleet separates two things:
 
 - **Runtime agents** — processes on a machine (Hermes, OLIVIER_MBP, KimiClaw, a Claude Code session, etc.)
 - **Platform surfaces** — Discord/Telegram bot user accounts that relay messages to/from a runtime agent (Wings, Zoe, Mara, Kopi)
 
-This skill answers "which agent is behind this surface?" (and the reverse) by reading the canonical mapping Jack maintains at `~/Documents/Coordination/`. It never stores data of its own — pure pointer.
+This skill answers "which agent is behind this surface?" (and the reverse) by reading the canonical mapping maintained at `~/Documents/Coordination/`. It never stores data of its own — pure pointer.
 
 ## When to Use
 
@@ -33,7 +33,7 @@ User says, or asks:
 
 **Source of truth:** `~/Documents/Coordination/*-identity-mapping.md` (most recently modified wins when multiple exist)
 
-**Vault mirror (fallback):** `/Users/jack.reis/Documents/=notes/inbox/agent-coordination.md`
+**Vault mirror (fallback):** `~/Documents/notes/inbox/agent-coordination.md`
 
 **Do NOT edit either file from within this skill.** Edits happen in the coordination folder directly; the skill just reads.
 
@@ -42,13 +42,13 @@ User says, or asks:
 ### Step 1: Find the latest mapping file
 
 ```bash
-latest=$(ls -t /Users/jack.reis/Documents/Coordination/*identity-mapping*.md 2>/dev/null | head -1)
+latest=$(ls -t ~/Documents/Coordination/*identity-mapping*.md 2>/dev/null | head -1)
 ```
 
 If `$latest` is empty, fall back to the vault mirror:
 
 ```bash
-fallback="/Users/jack.reis/Documents/=notes/inbox/agent-coordination.md"
+fallback="~/Documents/notes/inbox/agent-coordination.md"
 ```
 
 If BOTH are missing, respond: "No canonical fleet-identity mapping found at `~/Documents/Coordination/` or vault mirror. Check that `Documents/Coordination/<date>-identity-mapping.md` exists. See `~/Documents/Coordination/README.md` for the convention."
@@ -74,7 +74,7 @@ Format example for a slug query ("who is Wings?"):
 Wings → Hermes
 
 Hermes is the local Hermes Agent (Nous Research runtime) running on
-Jack's MacBook Pro (Mac14,9 — Apple M2 Pro, 32 GB); Wings is its
+the local machine; Wings is its
 Discord surface.
 
 Source: ~/Documents/Coordination/<latest>-identity-mapping.md
@@ -105,16 +105,16 @@ If the SoT file's `updated:` frontmatter (or mtime) is more than 14 days old, ap
 
 **Notes:**
 
-- Jack's primary (and currently only) local machine is a **MacBook Pro — Mac14,9, Apple M2 Pro, 32 GB**. Both Hermes and OLIVIER_MBP are local runtimes on this machine; "main Mac" and "the MacBook Pro" refer to the same box until a desktop successor lands.
+- The primary (and currently only) local machine is a **MacBook Pro — Mac14,9, Apple M2 Pro, 32 GB**. Both Hermes and OLIVIER_MBP are local runtimes on this machine; "main Mac" and "the MacBook Pro" refer to the same box until a desktop successor lands.
 - Hermes is the local Nous Research Hermes Agent runtime.
 - OLIVIER_MBP is the local OpenClaw gateway runtime. The hardware-keyed naming convention forward-prepares for desktop migration: when a Mac mini / Mac Studio lands, the migrated instance becomes OLIVIER_MINI / OLIVIER_STUDIO.
-- As of 2026-04-20, Jack is actively evaluating a **Mac mini** or **Mac Studio** as a future desktop. When that machine arrives, one of the runtimes (likely OLIVIER_MBP, which would then be renamed) is expected to move to it — update this note and the coordination mapping at that time.
+- As of 2026-04-20, Actively evaluating a **Mac mini** or **Mac Studio** as a future desktop. When that machine arrives, one of the runtimes (likely OLIVIER_MBP, which would then be renamed) is expected to move to it — update this note and the coordination mapping at that time.
 - KimiClaw is cloud-hosted OpenClaw; its Discord surface is Mara and its Telegram surface is Kopi.
 - Dizzy is a separate primitive — `dizzy.py` used by Claude Code sessions for Discord I/O. Not in this mapping because it's a CC-session relay, not a runtime agent of its own.
 
 ## Extension — Adding a New Agent
 
-To register a new agent:surface pair (e.g., Jack adds a Gemini CLI local agent with its own Discord surface):
+To register a new agent:surface pair (e.g., Adding a Gemini CLI local agent with its own Discord surface):
 
 1. Edit `~/Documents/Coordination/<today>-identity-mapping.md` (or create a new dated file — latest-wins glob will pick it up).
 2. Add the new row under both **Intent aliases** and **Platform identities** sections.
@@ -143,7 +143,7 @@ To register a new agent:surface pair (e.g., Jack adds a Gemini CLI local agent w
 ## File Paths (Absolute)
 
 - Skill: `plugins/ai-agency/autonomous-ai-agents/skills/fleet-identity/SKILL.md`
-- Canonical mapping (SoT): `/Users/jack.reis/Documents/Coordination/*-identity-mapping.md` (latest wins)
-- Coordination folder README: `/Users/jack.reis/Documents/Coordination/README.md`
-- Vault mirror (fallback): `/Users/jack.reis/Documents/=notes/inbox/agent-coordination.md`
-- Related routing primitive: `/Users/jack.reis/Documents/=notes/claude/scripts/dizzy.py` (IDENTITIES)
+- Canonical mapping (SoT): `~/Documents/Coordination/*-identity-mapping.md` (latest wins)
+- Coordination folder README: `~/Documents/Coordination/README.md`
+- Vault mirror (fallback): `~/Documents/notes/inbox/agent-coordination.md`
+- Related routing primitive: `~/Documents/notes/claude/scripts/dizzy.py` (IDENTITIES)

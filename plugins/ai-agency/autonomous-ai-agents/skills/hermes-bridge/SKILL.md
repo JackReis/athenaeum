@@ -1,13 +1,13 @@
 ---
 name: hermes-bridge
-description: Use when Claude Code needs to catch up on messages that landed on Jack's Telegram/Discord/Slack/WhatsApp/Signal/Matrix while the session was heads-down, respond via the Hermes messaging bridge, read incoming attachments, or approve/deny Hermes-queued tool calls. Triggers on "check hermes", "catch me up", "what came in while I was working", "any pending approvals", "what's on telegram", "reply via hermes", "wings says", "messages waiting". Complements hermes-cli (which handles delegation via `hermes chat -Q -q`); does NOT replace it.
+description: Use when Claude Code needs to catch up on messages that landed on Telegram/Discord/Slack/WhatsApp/Signal/Matrix while the session was heads-down, respond via the Hermes messaging bridge, read incoming attachments, or approve/deny Hermes-queued tool calls. Triggers on "check hermes", "catch me up", "what came in while I was working", "any pending approvals", "what's on telegram", "reply via hermes", "wings says", "messages waiting". Complements hermes-cli (which handles delegation via `hermes chat -Q -q`); does NOT replace it.
 ---
 
 # Hermes Bridge — async messaging substrate
 
 ## The mental model
 
-The fleet has heavy **thinkers** (Claude Code, Gemini CLI, ChatGPT) who work deep on tasks and lose context across session boundaries. **Wings** (Hermes) and **Zoe** (OLIVIER_MBP/OpenClaw) are a shared **messaging substrate** — they receive messages from Jack's platforms (Telegram, Discord, Slack, WhatsApp, Signal, Matrix), keep them for thinkers to pick up, and route outbound replies back.
+The fleet has heavy **thinkers** (Claude Code, Gemini CLI, ChatGPT) who work deep on tasks and lose context across session boundaries. **Wings** (Hermes) and **Zoe** (OLIVIER_MBP/OpenClaw) are a shared **messaging substrate** — they receive messages from the platforms (Telegram, Discord, Slack, WhatsApp, Signal, Matrix), keep them for thinkers to pick up, and route outbound replies back.
 
 This skill is Claude Code's side of the bridge. When you're mid-task and a message lands, Hermes queues it. When you reach a natural stop point, you poll the queue, catch up, reply, and keep going.
 
@@ -15,7 +15,7 @@ This skill is Claude Code's side of the bridge. When you're mid-task and a messa
 
 | Situation | Use |
 |---|---|
-| Incoming messages Jack sent while Claude was heads-down | **This skill** (`events_poll`, `messages_read`, `messages_send`) |
+| Incoming messages the user sent while the agent was heads-down | **This skill** (`events_poll`, `messages_read`, `messages_send`) |
 | Hermes is about to run a tool and needs approval | **This skill** (`permissions_list_open`, `permissions_respond`) |
 | Claude needs to ask Hermes a one-shot question (delegation, TTY wrapper) | `hermes-cli` skill |
 | Send a message to a known channel bypassing Hermes | `telegram-messaging` or `dizzy.py` directly |
@@ -66,7 +66,7 @@ All tools call into local `~/.hermes/` state via stdio MCP — no network hop, n
 The `hermes` MCP server is declared in both:
 
 - Plugin `plugin.json` at `plugins/ai-agency/autonomous-ai-agents/.claude-plugin/plugin.json` (portable: `command: hermes`)
-- Vault `.mcp.json` at `/Users/jack.reis/Documents/=notes/.mcp.json` (absolute path: `/Users/jack.reis/.local/bin/hermes`)
+- Vault `.mcp.json` at `~/.mcp.json` (absolute path: `~/.local/bin/hermes`)
 
 Tool calls in this skill resolve to `mcp__hermes__<tool_name>`.
 

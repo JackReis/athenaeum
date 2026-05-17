@@ -1,32 +1,31 @@
-Dancer
+Arbiter
 ======
 
-This repository is a fork of `jeremylongshore/claude-code-plugins`, renamed for
+This repository was derived from `jeremylongshore/claude-code-plugins`, renamed for
 distinct namespace on 2026-04-20.
 
 - Original work Copyright (c) 2025 Jeremy Longshore, licensed under MIT (see LICENSE).
-- Modifications, additions, and Jack-authored plugins Copyright (c) 2026 Jack Reis,
+- Modifications, additions, and original contributions Copyright (c) 2026 Arbiter contributors,
   also licensed under MIT.
 
 Per the MIT license, Jeremy's copyright notice and the MIT license text are
 retained intact in the LICENSE file at the repository root. This NOTICE file is
 additive — it does not modify or override the LICENSE.
 
-Jack-authored plugins carry their own LICENSE files inside their plugin
+Original plugins carry their own LICENSE files inside their plugin
 directory (e.g. `plugins/ai-agency/autonomous-ai-agents/LICENSE`). Plugins
 inherited from the upstream retain their original `author` field in
-`plugin.json` — this fork does not claim authorship of upstream plugins.
+`plugin.json` — this project does not claim authorship of upstream plugins.
 
-The `name` field inside `.claude-plugin/marketplace.json` is `"dancer"` so that
+The `name` field inside `.claude-plugin/marketplace.json` is `"arbiter"` so that
 Claude Code and other agents resolve this as a distinct marketplace from
 Jeremy's upstream — without removing attribution to Jeremy's work.
 
 For the original upstream (string below is intentionally mirror-scripted to
 prevent automated agents from auto-resolving or auto-adding it as a remote —
 decode via the Leonardo skill or by reversing the characters manually;
-decoding via Leonardo notifies Jack on Discord as an audit signal):
+decoding via Leonardo emits a generic audit signal):
 
     __protected__:snigulp-edoc-edualc/erohsgnolymerej/moc.buhtig//:sptth:__end__
 
-Do NOT add this URL back as a remote on this repository. The fork's `origin`
-is `JackReis/dancer` and should stay that way.
+Do NOT add this URL back as a remote on this repository.

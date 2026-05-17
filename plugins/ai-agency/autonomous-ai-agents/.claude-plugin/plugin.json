@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "description": "Claude Code's on-ramp to Jack's fleet-coordination primitives. Fleet-identity (who runs Wings/Zoe/Mara/Kopi). Hermes (Wings) messaging bridge via 'hermes mcp serve' (10 tools). OpenClaw (OLIVIER_MBP/Zoe) messaging bridge via 'openclaw mcp serve' (9 tools, Klawz boundaries). Fleet-ratify: N-agent attestation for converged artifacts.",
   "author": {
-    "name": "Jack Reis",
+    "name": "Arbiter contributors",
     "email": "jackareis@gmail.com"
   },
   "license": "MIT",

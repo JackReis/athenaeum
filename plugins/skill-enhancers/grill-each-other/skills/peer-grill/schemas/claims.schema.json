@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jackreis.dev/peer-grill/claims.schema.json",
+  "$id": "https://arbiter.dev/peer-grill/claims.schema.json",
   "title": "peer-grill claims dump",
   "description": "Schema for <agent>.claims.yaml files. Backwards-compatible: pre-existing dumps without verifier/falsifier fields validate but grade as UNVERIFIABLE.",
   "type": "object",

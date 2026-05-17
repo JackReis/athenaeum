@@ -17,7 +17,7 @@ def _detect_runtime() -> str:
         return "kimi-cli"
     if os.environ.get("CODEX_MODE"):
         return "codex"
-    return f"{os.environ.get('USER', 'agent')}-{socket.gethostname().split('.')[0]}"
+    return f"agent-{socket.gethostname().split('.')[0]}"
 
 
 def generate_card(

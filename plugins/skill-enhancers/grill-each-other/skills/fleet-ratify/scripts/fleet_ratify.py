@@ -8,7 +8,7 @@ import re
 import sys
 
 # Canonical Vault Root
-VAULT_ROOT = pathlib.Path("/Users/jack.reis/Documents/=notes")
+VAULT_ROOT = pathlib.Path(os.environ.get("FLEET_RATIFY_VAULT_ROOT", str(pathlib.Path.home() / "vault")))
 RATIFY_DIR = VAULT_ROOT / ".fleet-ratify"
 
 def get_sha256(file_path):

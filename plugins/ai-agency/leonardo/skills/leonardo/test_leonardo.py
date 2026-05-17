@@ -2,7 +2,7 @@
 
 Run locally with:
   python3 -m unittest discover \\
-    -s /Users/jack.reis/Documents/dancer/plugins/ai-agency/leonardo/skills/leonardo \\
+    -s /path/to/arbiter/plugins/ai-agency/leonardo/skills/leonardo \\
     -p 'test_*.py' -v
 """
 

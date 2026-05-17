@@ -3,10 +3,10 @@
   "version": "1.3.1",
   "description": "Dialectic claim discipline for AI agents: scholastic vocabulary, peer-grill file-based reconciliation, runnable verifiers/falsifiers, multi-agent ratification, fleet-ratify N-agent attestation, permutation NxN fleet topology ratification. Synthesis: an unexamined claim does not exist.",
   "author": {
-    "name": "Jack Reis",
+    "name": "Arbiter contributors",
     "email": "jackareis@gmail.com"
   },
-  "repository": "https://github.com/JackReis/dancer",
+  "repository": "https://github.com/JackReis/arbiter",
   "license": "MIT",
   "keywords": [
     "dialectic",

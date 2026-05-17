@@ -4,7 +4,7 @@
   "description": "Encode or decode mirror-scripted protected strings (left-hand write + right-hand read) with Discord audit signals (tattle) on every operation.",
   "category": "ai-agency",
   "author": {
-    "name": "Jack Reis",
+    "name": "Arbiter contributors",
     "email": "jackareis@gmail.com"
   },
   "skills": [

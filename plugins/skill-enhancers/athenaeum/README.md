@@ -7,9 +7,9 @@ A dialectic skill pack for agent design, multi-agent reconciliation, and fleet-w
 ## Install
 
 ```bash
-npx skills add jack-reis/dancer@athenaeum-design
-npx skills add jack-reis/dancer@athenaeum-reconcile
-npx skills add jack-reis/dancer@athenaeum-ratify
+npx skills add arbiter-org/dancer@athenaeum-design
+npx skills add arbiter-org/dancer@athenaeum-reconcile
+npx skills add arbiter-org/dancer@athenaeum-ratify
 ```
 
 Or clone and symlink into your agent's `skills/` directory.
@@ -43,7 +43,7 @@ Each skill includes a unified CLI:
 # Add scripts/ to PATH, then:
 athenaeum init my-topic --mode design
 athenaeum init my-topic --mode reconcile
-athenaeum init my-topic --mode ratify --roster claude-laptop,kimi-cloud,neo
+athenaeum init my-topic --mode ratify --roster agent-alpha,agent-beta,agent-gamma
 
 athenaeum diff my-topic
 athenaeum sign my-topic

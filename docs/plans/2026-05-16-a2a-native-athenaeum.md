@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
 **Step 4: Run test to verify it passes**
 
-Run: `cd /Users/jack.reis/Documents/dancer-a2a-explore && python3 plugins/skill-enhancers/athenaeum/scripts/test_agent_card.py`
+Run: `cd /path/to/project && python3 plugins/skill-enhancers/athenaeum/scripts/test_agent_card.py`
 
 Expected: PASS
 
@@ -156,7 +156,7 @@ def test_task_roundtrip():
 
 **Step 2: Run test to verify it fails**
 
-Run: `cd /Users/jack.reis/Documents/dancer-a2a-explore && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_task.py`
+Run: `cd /path/to/project && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_task.py`
 
 Expected: FAIL with `ModuleNotFoundError: No module named 'a2a_task'`
 
@@ -289,7 +289,7 @@ def init_task(
 
 **Step 4: Run test to verify it passes**
 
-Run: `cd /Users/jack.reis/Documents/dancer-a2a-explore && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_task.py`
+Run: `cd /path/to/project && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_task.py`
 
 Expected: PASS
 
@@ -333,7 +333,7 @@ def test_init_design_creates_task_json():
 
 **Step 2: Run test to verify it fails**
 
-Run: `cd /Users/jack.reis/Documents/dancer-a2a-explore && python3 plugins/skill-enhancers/athenaeum/scripts/test_athenaeum.py::AthenaeumTests::test_init_design_creates_task_json`
+Run: `cd /path/to/project && python3 plugins/skill-enhancers/athenaeum/scripts/test_athenaeum.py::AthenaeumTests::test_init_design_creates_task_json`
 
 Expected: FAIL with `AssertionError: task.json should exist`
 
@@ -363,7 +363,7 @@ import sys
 
 **Step 4: Run test to verify it passes**
 
-Run: `cd /Users/jack.reis/Documents/dancer-a2a-explore && python3 plugins/skill-enhancers/athenaeum/scripts/test_athenaeum.py::AthenaeumTests::test_init_design_creates_task_json`
+Run: `cd /path/to/project && python3 plugins/skill-enhancers/athenaeum/scripts/test_athenaeum.py::AthenaeumTests::test_init_design_creates_task_json`
 
 Expected: PASS
 
@@ -419,7 +419,7 @@ def test_tasks_send():
 
 **Step 2: Run test to verify it fails**
 
-Run: `cd /Users/jack.reis/Documents/dancer-a2a-explore && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_rpc.py`
+Run: `cd /path/to/project && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_rpc.py`
 
 Expected: FAIL with `ModuleNotFoundError: No module named 'a2a_rpc'`
 
@@ -549,7 +549,7 @@ if __name__ == "__main__":
 
 **Step 4: Run test to verify it passes**
 
-Run: `cd /Users/jack.reis/Documents/dancer-a2a-explore && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_rpc.py`
+Run: `cd /path/to/project && python3 plugins/skill-enhancers/athenaeum/scripts/test_a2a_rpc.py`
 
 Expected: PASS
 
@@ -678,7 +678,7 @@ Create or update a Task. Tasks are idempotent by ID.
   "params": {
     "task": {
       "id": "athenaeum-reconcile-pricing-abc123",
-      "sessionId": "kimi-mac-jr-20260516-001",
+      "sessionId": "kimi-agent-host-20260516-001",
       "status": "submitted",
       "metadata": {
         "athenaeum_mode": "reconcile",
@@ -702,7 +702,7 @@ Create or update a Task. Tasks are idempotent by ID.
   "result": {
     "task": {
       "id": "athenaeum-reconcile-pricing-abc123",
-      "sessionId": "kimi-mac-jr-20260516-001",
+      "sessionId": "kimi-agent-host-20260516-001",
       "status": "submitted",
       "createdAt": "2026-05-16T19:35:00+00:00",
       "updatedAt": "2026-05-16T19:35:00+00:00",
@@ -746,7 +746,7 @@ Cancel a Task.
 
 ```json
 {
-  "name": "claude-code-mac-jr",
+  "name": "claude-code-agent-host",
   "description": "Athenaeum dialectic agent — design, reconcile, ratify, audit.",
   "version": "0.2.0",
   "capabilities": {
@@ -757,8 +757,8 @@ Cancel a Task.
     }
   },
   "endpoints": {
-    "tasks": "file:///Users/jack.reis/Documents/dancer/.athenaeum/",
-    "artifacts": "file:///Users/jack.reis/Documents/dancer/.athenaeum/"
+    "tasks": "file:///path/to/project/.athenaeum/",
+    "artifacts": "file:///path/to/project/.athenaeum/"
   }
 }
 ```
@@ -794,7 +794,7 @@ git commit -m "docs(a2a): add A2A-native reference protocol
 **Step 1: Run all tests**
 
 ```bash
-cd /Users/jack.reis/Documents/dancer-a2a-explore/plugins/skill-enhancers/athenaeum/scripts
+cd /path/to/project/plugins/skill-enhancers/athenaeum/scripts
 python3 test_agent_card.py
 python3 test_a2a_task.py
 python3 test_athenaeum.py

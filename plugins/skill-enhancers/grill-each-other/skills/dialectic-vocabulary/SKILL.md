@@ -104,7 +104,7 @@ If two agents independently RATIFY the same merged statement but their ALETHEIA 
 - `peer-grill` — file-based reconciliation protocol (this skill is its vocabulary reference)
 - `grill-me` — single-track relentless interview
 - `grill-me-agents` — 13-branch interview for multi-agent designs
-- Substrate: [Tipi](https://github.com/JackReis/tipi) — the `Belief` dataclass carries `verifier` / `falsifier` / `disputation` / `aletheia_sha256` fields natively
+- Substrate: [Tipi](https://github.com/arbiter-org/tipi) — the `Belief` dataclass carries `verifier` / `falsifier` / `disputation` / `aletheia_sha256` fields natively
 - Vault doctrine: `docs/conventions/dialectic-vocabulary.md` (the canonical, longer-form version)
 
 ## What this is NOT

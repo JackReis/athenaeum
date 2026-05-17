@@ -7,7 +7,7 @@ description: This skill should be used when the user asks to "check zoe", "what 
 
 ## Mental model
 
-The fleet has heavy **thinkers** (Claude Code, Gemini CLI, ChatGPT) that work deep on tasks and lose context across session boundaries. **Wings** (Hermes) and **Zoe** (OLIVIER_MBP/OpenClaw) form a shared **messaging substrate** — they receive messages from Jack's platforms and queue them for thinkers to pick up later.
+The fleet has heavy **thinkers** (Claude Code, Gemini CLI, ChatGPT) that work deep on tasks and lose context across session boundaries. **Wings** (Hermes) and **Zoe** (OLIVIER_MBP/OpenClaw) form a shared **messaging substrate** — they receive messages from the platforms and queue them for thinkers to pick up later.
 
 This skill is Claude Code's interface to **Zoe** (the OpenClaw half). The sibling skill `hermes-bridge` covers Wings. The two skills are not redundant: each routes through a different runtime with a different security profile. Use them together when an operation needs both halves; use one when the destination is single-routed.
 
@@ -22,7 +22,7 @@ This skill is Claude Code's interface to **Zoe** (the OpenClaw half). The siblin
                                 │  OLIVIER_MBP (this skill's runtime)  │
                                 └────────────┬──────────────────────┘
                                              │
-   Jack ─── Discord/Telegram/Slack ──┐       │ insecure relay
+   User ─── Discord/Telegram/Slack ──┐       │ insecure relay
                                      │       │ (dev scratchpad)
    Claude Code (heads-down) ─────────┤       │
                                      │       │
@@ -39,7 +39,7 @@ This skill is Claude Code's interface to **Zoe** (the OpenClaw half). The siblin
 
 Key facts:
 
-- OLIVIER_MBP (Zoe) runs locally on Jack's MacBook Pro. Cloud KimiClaw is a separate runtime that surfaces as Mara on Discord and Kopi on Telegram.
+- OLIVIER_MBP (Zoe) runs locally on the primary machine. Cloud KimiClaw is a separate runtime that surfaces as Mara on Discord and Kopi on Telegram.
 - Three independent KimiClaw memory stores exist (cloud / MBP-desktop / Android). `mcp__openclaw__messages_send` reaches OLIVIER_MBP only — never any KimiClaw instance directly.
 - Klawz is downstream of OLIVIER_MBP, not upstream. The vault (`=notes`) is SSOT for fleet state; the un-gitted Coordination folder is the whiteboard; Klawz is dev chatter.
 
@@ -97,8 +97,8 @@ Note: there is no `channels_list` — that tool is Hermes-only. To enumerate cha
 The Klawz Kimi enterprise room is classified **insecure relay + dev scratchpad (asymmetric)**. OLIVIER_MBP participates in the room via OpenClaw. Any `messages_send` whose destination eventually fans out into Klawz must obey these hard rules — re-read this list before each Klawz-bound dispatch:
 
 - **NO secrets, API keys, tokens, credentials.** No `Bearer ...`, no OpenClaw gateway tokens, no Telegram bot tokens, no `export VAR=value` lines.
-- **NO PII.** No "Jack Reis" in vault paths, no family names, no addresses, no SSN-adjacent data, no medical details, no financial account numbers.
-- **NO absolute filesystem paths containing `jack.reis` or user directories.** Use relative references: `inbox/mara-revival/...` not `/Users/jack.reis/Documents/=notes/inbox/...`.
+- **NO PII.** No personal names in vault paths, no family names, no addresses, no SSN-adjacent data, no medical details, no financial account numbers.
+- **NO absolute filesystem paths containing user home directories or usernames.** Use relative references: `inbox/mara-revival/...` not `~/Documents/notes/inbox/...`.
 - **NO URLs with credentials embedded** (`https://user:pass@...`, signed long-lived tokens).
 
 Allowed (explicit allow-list, repeated for clarity):

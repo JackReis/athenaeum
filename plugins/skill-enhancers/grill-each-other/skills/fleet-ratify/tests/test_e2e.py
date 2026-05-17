@@ -24,7 +24,7 @@ class TestFleetRatify(unittest.TestCase):
         
         self.patched_script = pathlib.Path(self.test_dir) / "fleet_ratify_patched.py"
         patched_content = self.script_content.replace(
-            'VAULT_ROOT = pathlib.Path("/Users/jack.reis/Documents/=notes")',
+            'VAULT_ROOT = pathlib.Path(os.environ.get("FLEET_RATIFY_VAULT_ROOT", str(pathlib.Path.home() / "vault")))',
             f'VAULT_ROOT = pathlib.Path("{self.vault_root}")'
         )
         self.patched_script.write_text(patched_content)

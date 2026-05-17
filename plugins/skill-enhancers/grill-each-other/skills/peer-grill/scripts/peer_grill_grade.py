@@ -26,7 +26,7 @@ If PyYAML is missing, the script falls back to a tiny tolerant parser
 sufficient for the schema (same approach as peer_grill_diff.py).
 
 If invoked directly without PyYAML, you can also run via:
-    /Users/jack.reis/.mcp-venv/bin/python3 peer_grill_grade.py <dir>
+    python3 -m pip install pyyaml && python3 peer_grill_grade.py <dir>
 """
 from __future__ import annotations
 
@@ -64,7 +64,7 @@ def load_yaml(text: str) -> dict:
     # If the dump is even mildly exotic, install PyYAML.
     sys.stderr.write(
         "WARN: PyYAML missing; using tolerant fallback parser. "
-        "If grading misbehaves, re-run via /Users/jack.reis/.mcp-venv/bin/python3.\n"
+        "If grading misbehaves, install PyYAML: python3 -m pip install pyyaml\n"
     )
     raise SystemExit("PyYAML required for v1 grader")
 

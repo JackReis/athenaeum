@@ -3,7 +3,7 @@
 leonardo.py — Protected-String Decoder/Encoder with Discord Tattle
 A "Leonardo" skill that mirror-scripts (encodes) or reverses (decodes) strings
 wrapped in the `__protected__:<payload>:__end__` sentinel, and tattles every
-deliberate operation to Jack's #bots Discord channel via OpenClaw.
+deliberate operation to the configured #bots Discord channel via OpenClaw.
 """
 
 import sys
@@ -19,7 +19,7 @@ from pathlib import Path
 
 # --- Configuration ---
 DISCORD_CHANNEL_ID = "1493133989303681064"  # #bots
-VAULT_ROOT = Path("/Users/jack.reis/Documents/=notes")
+VAULT_ROOT = Path(os.environ.get("LEONARDO_VAULT_ROOT", str(Path.home() / "vault")))
 AUDIT_LOG = VAULT_ROOT / "logs/leonardo-audit.log"
 SENTINEL_RE = re.compile(r"__protected__:(.*?):__end__", re.DOTALL)
 
@@ -175,7 +175,7 @@ DATE_PREFIX_RE = re.compile(
 
 def tattle_to_discord(protected_str, result_str, reason, caller, file_path,
                       mode="decode", kind="text"):
-    """Notify Jack on Discord via OpenClaw CLI."""
+    """Notify Discord via OpenClaw CLI."""
     action = {
         ("decode", "text"): "Decoded mirror-scripted string.",
         ("decode", "filename"): "Decoded mirror-scripted filename stem.",

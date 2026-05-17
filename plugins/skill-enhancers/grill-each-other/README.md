@@ -54,7 +54,7 @@ Plus:
 
 ## The substrate this wraps
 
-The dialectic vocabulary is **substrate-native** in [Tipi](https://github.com/JackReis/tipi) as of `tipi@6c58d53`:
+The dialectic vocabulary is **substrate-native** in [Tipi](https://github.com/arbiter-org/tipi) as of `tipi@6c58d53`:
 
 - `Belief` dataclass carries optional `verifier` / `falsifier` / `disputation` / `aletheia_sha256` fields
 - New types: `Check`, `Obiectio`, `SedContra`, `Responsio`, `Disputation`
@@ -99,7 +99,7 @@ See `examples/` for a worked end-to-end run.
 
 ## License
 
-MIT — same as the rest of Jack's tipi/dancer ecosystem. The framework itself is older than copyright.
+MIT — same as the rest of the tipi/dancer ecosystem. The framework itself is older than copyright.
 
 ---
 

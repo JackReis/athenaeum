@@ -38,7 +38,7 @@ def _detect_agent_slug() -> str:
         return "codex"
     # Fall back to hostname + user
     import socket
-    return f"{os.environ.get('USER', 'agent')}-{socket.gethostname().split('.')[0]}"
+    return f"agent-{socket.gethostname().split('.')[0]}"
 
 
 def cmd_init(args):

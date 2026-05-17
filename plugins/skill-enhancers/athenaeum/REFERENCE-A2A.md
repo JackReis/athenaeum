@@ -63,7 +63,7 @@ Create or update a Task. Tasks are idempotent by ID.
   "params": {
     "task": {
       "id": "athenaeum-reconcile-pricing-abc123",
-      "sessionId": "kimi-mac-jr-20260516-001",
+      "sessionId": "agent-hostname-20260516-001",
       "status": "submitted",
       "metadata": {
         "athenaeum_mode": "reconcile",
@@ -87,7 +87,7 @@ Create or update a Task. Tasks are idempotent by ID.
   "result": {
     "task": {
       "id": "athenaeum-reconcile-pricing-abc123",
-      "sessionId": "kimi-mac-jr-20260516-001",
+      "sessionId": "agent-hostname-20260516-001",
       "status": "submitted",
       "createdAt": "2026-05-16T19:35:00+00:00",
       "updatedAt": "2026-05-16T19:35:00+00:00",
@@ -156,7 +156,7 @@ The stream ends automatically when the task reaches a terminal state (`completed
 
 ```json
 {
-  "name": "claude-code-mac-jr",
+  "name": "claude-code-agent-hostname",
   "description": "Athenaeum dialectic agent — design, reconcile, ratify, audit.",
   "version": "0.2.0",
   "capabilities": {
@@ -167,8 +167,8 @@ The stream ends automatically when the task reaches a terminal state (`completed
     }
   },
   "endpoints": {
-    "tasks": "file:///Users/jack.reis/Documents/dancer/.athenaeum/",
-    "artifacts": "file:///Users/jack.reis/Documents/dancer/.athenaeum/"
+    "tasks": "file:///path/to/vault/.athenaeum/",
+    "artifacts": "file:///path/to/vault/.athenaeum/"
   }
 }
 ```

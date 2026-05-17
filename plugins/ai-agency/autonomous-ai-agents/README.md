@@ -1,6 +1,6 @@
 # autonomous-ai-agents
 
-Fleet-coordination plugin for Jack Reis's autonomous AI agent fleet. Lets Claude Code answer "who is X?" across the fleet's Discord/Telegram surfaces, and — as of v0.3 — reach BOTH messaging bridges (Wings via Hermes, Zoe via OpenClaw) as native MCP servers.
+Fleet-coordination plugin for the autonomous AI agent fleet. Lets Claude Code answer "who is X?" across the fleet's Discord/Telegram surfaces, and — as of v0.3 — reach BOTH messaging bridges (Wings via Hermes, Zoe via OpenClaw) as native MCP servers.
 
 ## What's new in v0.3
 
@@ -62,12 +62,12 @@ From the `dancer` marketplace:
 /plugin install autonomous-ai-agents@dancer
 ```
 
-The marketplace lives at `github:JackReis/dancer` (mirror at `gitlab:jackrei/dancer`). Register in `~/.claude/settings.json` under `extraKnownMarketplaces`.
+The marketplace lives at `github:arbiter-org/dancer` (mirror at `gitlab:arbiter-org/dancer`). Register in `~/.claude/settings.json` under `extraKnownMarketplaces`.
 
 Or load from a local path during development:
 
 ```
-/plugin install path:/Users/jack.reis/Documents/dancer/plugins/ai-agency/autonomous-ai-agents
+/plugin install path:/path/to/arbiter/plugins/ai-agency/autonomous-ai-agents
 ```
 
 ## Hermes MCP setup
@@ -148,7 +148,7 @@ The skill polls OpenClaw's event queue, reads/sends messages through Zolivier, a
 
 ## Data source
 
-The plugin **does not bundle** the fleet mapping. It points at the canonical file Jack maintains in `~/Documents/Coordination/` so there's exactly one source of truth. Edit `~/Documents/Coordination/<today>-identity-mapping.md` directly to update; the skill picks up changes on next invocation.
+The plugin **does not bundle** the fleet mapping. It points at the canonical file maintained in `~/Documents/Coordination/` so there's exactly one source of truth. Edit `~/Documents/Coordination/<today>-identity-mapping.md` directly to update; the skill picks up changes on next invocation.
 
 If `~/Documents/Coordination/` is missing or empty, the skill falls back to the vault mirror at `=notes/inbox/agent-coordination.md`.
 
@@ -162,7 +162,7 @@ If `~/Documents/Coordination/` is missing or empty, the skill falls back to the 
 ## Related
 
 - Sibling skill `hermes-cli` (in `=notes/.claude/skills/hermes-cli/`) — TTY one-shot delegation via `hermes chat -Q -q`. Complementary to `hermes-bridge`.
-- Sibling skill `telegram-messaging` (in `=notes/.claude/skills/telegram-messaging/`) — preferred for single-Jack DMs per user pref. Complementary to `openclaw-bridge`.
+- Sibling skill `telegram-messaging` (in `=notes/.claude/skills/telegram-messaging/`) — preferred for single-user DMs per user pref. Complementary to `openclaw-bridge`.
 - `dizzy.py` IDENTITIES (in `=notes/claude/scripts/`) — Discord routing primitive (tokens, channels). Different concern from semantic identity.
 - Klawz security SoT: `~/Documents/Coordination/2026-04-23-klawz-kimi-group-addendum.md`.
 - Hermes Agent: <https://hermes-agent.nousresearch.com/>
