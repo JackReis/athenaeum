@@ -6,12 +6,6 @@
 [![Packs](https://img.shields.io/badge/packs-5-green)](plugins/)
 [![2025 Schema](https://img.shields.io/badge/2025%20Schema-100%25-success)](SKILLS_SCHEMA_2025.md)
 
-<p align="center">
-  <img src="docs/assets/arbiter-council-light.jpg" alt="Arbiter — robot council in the pantheon" width="320">
-  <img src="docs/assets/arbiter-robot-toga.svg" alt="Arbiter — robot in a toga" width="260">
-  <img src="docs/assets/arbiter-assembly-light.jpg" alt="Arbiter — fleet assembly" width="320">
-</p>
-
 **Arbiter** is an A2A-native agent consensus framework delivered as a curated collection of Claude Code skill packs. Agents design, reconcile, ratify, and audit — with filesystem durability as the floor and JSON-RPC/SSE as the live wire.
 
 Originally derived from an MIT-licensed upstream, inherited plugins were removed on 2026-05-16. Arbiter now ships only original contributions.
@@ -106,6 +100,10 @@ See [AGENTS.md](AGENTS.md) for the full developer guide, schema details, and Git
 ---
 
 ## A2A Native
+
+<p align="center">
+  <img src="docs/assets/arbiter-council-light.jpg" alt="Arbiter — robot council in the pantheon" width="420">
+</p>
 
 Arbiter speaks the [Agent-to-Agent Protocol](https://github.com/google/A2A) natively:
 
