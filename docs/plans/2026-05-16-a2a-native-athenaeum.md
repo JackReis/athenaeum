@@ -4,7 +4,11 @@
 
 **Goal:** Make A2A (Agent-to-Agent Protocol) a native language of the Athenaeum framework — Agent Cards for identity, Tasks as the atomic unit, typed Artifacts for durable consensus, and JSON-RPC/SSE as the live transport, while preserving filesystem durability as the persistence layer.
 
+<<<<<<< HEAD
 **Architecture:** A2A becomes the wire format and conceptual model; Athenaeum becomes an A2A extension protocol. The filesystem (`~/.athenaeum/<topic>/`) becomes a Task persistence adapter that serializes A2A Tasks and Artifacts. The Athenaeum gains an A2A JSON-RPC endpoint for live interop, falling back to filesystem polling for async cross-session workflows. Each agent publishes an Agent Card describing its Athenaeum capabilities.
+=======
+**Architecture:** A2A becomes the wire format and conceptual model; Athenaeum becomes an A2A extension protocol. The filesystem (`~/.athenaeum/<topic>/`) becomes a Task persistence adapter that serializes A2A Tasks and Artifacts. The rbitr gains an A2A JSON-RPC endpoint for live interop, falling back to filesystem polling for async cross-session workflows. Each agent publishes an Agent Card describing its Athenaeum capabilities.
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 
 **Tech Stack:** Python 3 (stdlib), JSON-RPC 2.0, SSE over HTTP, YAML/JSON for filesystem persistence, Markdown for human-readable artifacts.
 
@@ -380,7 +384,11 @@ git commit -m "feat(a2a): wire A2A Task creation into athenaeum init
 
 ---
 
+<<<<<<< HEAD
 ## Task 4: Add A2A JSON-RPC Shim to Athenaeum
+=======
+## Task 4: Add A2A JSON-RPC Shim to rbitr
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 
 **Files:**
 - Create: `plugins/skill-enhancers/athenaeum/scripts/a2a_rpc.py`
@@ -769,7 +777,11 @@ A2A-native Athenaeum agents can interoperate with filesystem-only agents:
 
 - A2A agent creates Task → filesystem agent reads `task.json` and acts
 - Filesystem agent writes YAML → A2A agent polls `tasks/get` for updates
+<<<<<<< HEAD
 - The Athenaeum can translate between A2A JSON-RPC and filesystem events
+=======
+- The rbitr can translate between A2A JSON-RPC and filesystem events
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 
 No agent is required to implement A2A. The filesystem is the floor.
 ```

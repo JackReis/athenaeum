@@ -720,7 +720,11 @@ Mandatory Requirement: Maintain immaculate session logs across ALL repositories 
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
+<<<<<<< HEAD
 This project is indexed by GitNexus as **athenaeum** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+=======
+This project is indexed by GitNexus as **athenaeum** (76150 symbols, 77965 relationships, 110 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 

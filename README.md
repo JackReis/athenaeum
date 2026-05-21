@@ -47,7 +47,8 @@ Originally derived from an MIT-licensed upstream, inherited plugins were removed
 | `fleet-ratify` | Ratify fleet decisions with SHA-256 attestation |
 | `permutation` | NxN fleet topology ratification with visual diagrams |
 | `caveman` | Ultra-compressed communication mode (75% token reduction) |
-| `find-skills` | Discover and install agent skills |
+| `dialectic-vocabulary` | Scholastic vocabulary for precise dialectic claims |
+| `peer-grill-with-agents` | Code-aware variant that cross-references existing agent definitions |
 
 ### athenaeum (4 skills)
 
@@ -102,7 +103,11 @@ See [AGENTS.md](AGENTS.md) for the full developer guide, schema details, and Git
 ## A2A Native
 
 <p align="center">
+<<<<<<< HEAD
   <img src="docs/assets/athenaeum-council-light.jpg" alt="Athenaeum — robot council in the pantheon" width="420">
+=======
+  <img src="docs/assets/athenaeum-council-light.jpg" alt="Athenaeum — council of agents" width="420">
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 </p>
 
 Athenaeum speaks the [Agent-to-Agent Protocol](https://github.com/google/A2A) natively:
@@ -129,7 +134,11 @@ All agents working in this repo follow the **Fleet Directive — Durable Evidenc
 ---
 
 <p align="center">
+<<<<<<< HEAD
   <img src="docs/assets/athenaeum-robot-toga.svg" alt="Athenaeum — robot in a toga" width="200">
+=======
+  <img src="docs/assets/athenaeum-robot-toga.svg" alt="Athenaeum — agent in a toga" width="200">
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 </p>
 
 ## License

@@ -12,7 +12,11 @@ This repository contains plugin packs for Claude Code. Originally derived from t
 All agents working in this repo must follow the **Fleet Directive — Durable Evidence**:
 `~/Documents/=notes/docs/conventions/fleet-directive.md`
 
+<<<<<<< HEAD
 Done = artifact + path + verification + commit + push + caveats. The evidence, not the vocabulary, is what distinguishes measurement from theatre. Autonomous workers under Athenaeum satisfy evidence via `proof_of_work` schema, not handoff files.
+=======
+Done = artifact + path + verification + commit + push + caveats. The evidence, not the vocabulary, is what distinguishes measurement from theatre. Autonomous workers under rbitr satisfy evidence via `proof_of_work` schema, not handoff files.
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 
 ## Plugin Packs
 
@@ -76,7 +80,11 @@ version: 1.0.0                      # Athenaeum package/runtime field
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
+<<<<<<< HEAD
 This project is indexed by GitNexus as **athenaeum** (101360 symbols, 102995 relationships, 114 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+=======
+This project is indexed by GitNexus as **athenaeum** (76150 symbols, 77965 relationships, 110 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+>>>>>>> f28a0e1 (refactor: rename arbiter → athenaeum (repo) + rbitr (agent slug))
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
