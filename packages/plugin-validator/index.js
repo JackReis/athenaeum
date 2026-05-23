@@ -17,6 +17,22 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+// Gracefully require @sentry/node for error reporting
+let Sentry;
+try {
+  Sentry = require('@sentry/node');
+} catch (e) {
+  // Gracefully ignore missing @sentry/node
+}
+
+if (Sentry && process.env.SENTRY_DSN) {
+  Sentry.init({
+    dsn: process.env.SENTRY_DSN
+  });
+} else {
+  console.warn('[Diagnostic] Sentry Node is not initialized. (SENTRY_DSN not set or @sentry/node package not loaded)');
+}
+
 // ANSI color codes
 const colors = {
   reset: '\x1b[0m',
