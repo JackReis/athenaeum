@@ -12,9 +12,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/security/cors-policy-validator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/security/cors-policy-validator",
   "license": "MIT",
-  "installation": "/plugin install cors-policy-validator@claude-code-plugins-plus",
+  "installation": "/plugin install cors-policy-validator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

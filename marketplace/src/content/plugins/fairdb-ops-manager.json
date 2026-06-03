@@ -12,9 +12,9 @@
     "name": "Community"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/community/fairdb-ops-manager",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/community/fairdb-ops-manager",
   "license": "MIT",
-  "installation": "/plugin install fairdb-ops-manager@claude-code-plugins-plus",
+  "installation": "/plugin install fairdb-ops-manager@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

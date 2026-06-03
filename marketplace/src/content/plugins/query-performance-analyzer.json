@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/database/query-performance-analyzer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/database/query-performance-analyzer",
   "license": "MIT",
-  "installation": "/plugin install query-performance-analyzer@claude-code-plugins-plus",
+  "installation": "/plugin install query-performance-analyzer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

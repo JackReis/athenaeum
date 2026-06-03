@@ -19,9 +19,9 @@
     "url": "https://intentsolutions.io"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/productivity/overnight-dev",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/productivity/overnight-dev",
   "license": "MIT",
-  "installation": "/plugin install overnight-dev@claude-code-plugins-plus",
+  "installation": "/plugin install overnight-dev@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

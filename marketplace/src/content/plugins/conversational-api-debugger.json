@@ -17,9 +17,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/mcp/conversational-api-debugger",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/mcp/conversational-api-debugger",
   "license": "MIT",
-  "installation": "/plugin install conversational-api-debugger@claude-code-plugins-plus",
+  "installation": "/plugin install conversational-api-debugger@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -20,9 +20,9 @@
     "email": "jeremy@intentsolutions.io"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/productivity/001-jeremy-taskwarrior-integration",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/productivity/001-jeremy-taskwarrior-integration",
   "license": "MIT",
-  "installation": "/plugin install 001-jeremy-taskwarrior-integration@claude-code-plugins-plus",
+  "installation": "/plugin install 001-jeremy-taskwarrior-integration@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

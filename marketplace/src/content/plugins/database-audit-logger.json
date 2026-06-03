@@ -12,9 +12,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/database/database-audit-logger",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/database/database-audit-logger",
   "license": "MIT",
-  "installation": "/plugin install database-audit-logger@claude-code-plugins-plus",
+  "installation": "/plugin install database-audit-logger@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

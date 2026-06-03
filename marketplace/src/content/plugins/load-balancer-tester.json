@@ -14,9 +14,9 @@
     "name": "Claude Code Plugin Hub"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/load-balancer-tester",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/load-balancer-tester",
   "license": "MIT",
-  "installation": "/plugin install load-balancer-tester@claude-code-plugins-plus",
+  "installation": "/plugin install load-balancer-tester@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -12,9 +12,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/database/stored-procedure-generator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/database/stored-procedure-generator",
   "license": "MIT",
-  "installation": "/plugin install stored-procedure-generator@claude-code-plugins-plus",
+  "installation": "/plugin install stored-procedure-generator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

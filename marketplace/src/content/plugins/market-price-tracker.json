@@ -16,9 +16,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/market-price-tracker",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/market-price-tracker",
   "license": "MIT",
-  "installation": "/plugin install market-price-tracker@claude-code-plugins-plus",
+  "installation": "/plugin install market-price-tracker@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

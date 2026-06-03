@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/error-rate-monitor",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/error-rate-monitor",
   "license": "MIT",
-  "installation": "/plugin install error-rate-monitor@claude-code-plugins-plus",
+  "installation": "/plugin install error-rate-monitor@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

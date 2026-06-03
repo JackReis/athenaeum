@@ -1,6 +1,6 @@
 {
   "name": "skills-powerkit",
-  "description": "Ultimate plugin management toolkit with 5 Agent Skills - automates creating, validating, auditing, and managing plugins in the claude-code-plugins marketplace",
+  "description": "Ultimate plugin management toolkit with 5 Agent Skills - automates creating, validating, auditing, and managing plugins in the athenaeum marketplace",
   "version": "1.0.0",
   "category": "other",
   "keywords": [
@@ -18,9 +18,9 @@
     "name": "Claude Code Plugins"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins",
+  "repository": "https://github.com/JackReis/athenaeum",
   "license": "MIT",
-  "installation": "/plugin install skills-powerkit@claude-code-plugins-plus",
+  "installation": "/plugin install skills-powerkit@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

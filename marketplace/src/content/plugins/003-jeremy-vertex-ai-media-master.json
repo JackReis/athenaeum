@@ -22,9 +22,9 @@
     "email": "jeremy@intentsolutions.io"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/productivity/003-jeremy-vertex-ai-media-master",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/productivity/003-jeremy-vertex-ai-media-master",
   "license": "MIT",
-  "installation": "/plugin install 003-jeremy-vertex-ai-media-master@claude-code-plugins-plus",
+  "installation": "/plugin install 003-jeremy-vertex-ai-media-master@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

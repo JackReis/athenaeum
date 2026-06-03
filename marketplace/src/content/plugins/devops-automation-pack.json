@@ -18,9 +18,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/packages/devops-automation-pack",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/packages/devops-automation-pack",
   "license": "MIT",
-  "installation": "/plugin install devops-automation-pack@claude-code-plugins-plus",
+  "installation": "/plugin install devops-automation-pack@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

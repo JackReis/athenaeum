@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/security/dependency-checker",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/security/dependency-checker",
   "license": "MIT",
-  "installation": "/plugin install dependency-checker@claude-code-plugins-plus",
+  "installation": "/plugin install dependency-checker@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

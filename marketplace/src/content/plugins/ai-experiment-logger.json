@@ -13,9 +13,9 @@
     "name": "Claude Code Plugins"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/mcp/ai-experiment-logger",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/mcp/ai-experiment-logger",
   "license": "MIT",
-  "installation": "/plugin install ai-experiment-logger@claude-code-plugins-plus",
+  "installation": "/plugin install ai-experiment-logger@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

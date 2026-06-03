@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/api-contract-generator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/api-contract-generator",
   "license": "MIT",
-  "installation": "/plugin install api-contract-generator@claude-code-plugins-plus",
+  "installation": "/plugin install api-contract-generator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

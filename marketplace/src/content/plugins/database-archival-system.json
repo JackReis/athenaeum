@@ -12,9 +12,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/database/database-archival-system",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/database/database-archival-system",
   "license": "MIT",
-  "installation": "/plugin install database-archival-system@claude-code-plugins-plus",
+  "installation": "/plugin install database-archival-system@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

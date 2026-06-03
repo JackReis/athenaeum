@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-ml/model-explainability-tool",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-ml/model-explainability-tool",
   "license": "MIT",
-  "installation": "/plugin install model-explainability-tool@claude-code-plugins-plus",
+  "installation": "/plugin install model-explainability-tool@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

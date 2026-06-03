@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/load-test-runner",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/load-test-runner",
   "license": "MIT",
-  "installation": "/plugin install load-test-runner@claude-code-plugins-plus",
+  "installation": "/plugin install load-test-runner@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -18,9 +18,9 @@
     "email": "jeremy@intentsolutions.io"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/productivity/002-jeremy-yaml-master-agent",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/productivity/002-jeremy-yaml-master-agent",
   "license": "MIT",
-  "installation": "/plugin install 002-jeremy-yaml-master-agent@claude-code-plugins-plus",
+  "installation": "/plugin install 002-jeremy-yaml-master-agent@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-ml/ai-ethics-validator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-ml/ai-ethics-validator",
   "license": "MIT",
-  "installation": "/plugin install ai-ethics-validator@claude-code-plugins-plus",
+  "installation": "/plugin install ai-ethics-validator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

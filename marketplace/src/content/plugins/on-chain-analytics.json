@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/on-chain-analytics",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/on-chain-analytics",
   "license": "MIT",
-  "installation": "/plugin install on-chain-analytics@claude-code-plugins-plus",
+  "installation": "/plugin install on-chain-analytics@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

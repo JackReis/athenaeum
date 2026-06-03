@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/throughput-analyzer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/throughput-analyzer",
   "license": "MIT",
-  "installation": "/plugin install throughput-analyzer@claude-code-plugins-plus",
+  "installation": "/plugin install throughput-analyzer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

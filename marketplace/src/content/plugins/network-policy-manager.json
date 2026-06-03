@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/devops/network-policy-manager",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/devops/network-policy-manager",
   "license": "MIT",
-  "installation": "/plugin install network-policy-manager@claude-code-plugins-plus",
+  "installation": "/plugin install network-policy-manager@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

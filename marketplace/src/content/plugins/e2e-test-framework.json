@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/e2e-test-framework",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/e2e-test-framework",
   "license": "MIT",
-  "installation": "/plugin install e2e-test-framework@claude-code-plugins-plus",
+  "installation": "/plugin install e2e-test-framework@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

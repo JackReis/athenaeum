@@ -24,9 +24,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/finance/openbb-terminal",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/finance/openbb-terminal",
   "license": "MIT",
-  "installation": "/plugin install openbb-terminal@claude-code-plugins-plus",
+  "installation": "/plugin install openbb-terminal@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

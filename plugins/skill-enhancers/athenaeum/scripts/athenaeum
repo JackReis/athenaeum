@@ -111,6 +111,15 @@ def cmd_init(args):
         print(f"[athenaeum] Next: paste artifact into {topic_dir}/artifact.md, "
               f"compute sha256, update manifest.")
 
+    elif mode == "audit":
+        tmpl = TEMPLATE_DIR / "audit" / "audit-report.md.template"
+        audit_tmpl = tmpl.read_text() if tmpl.exists() else _default_audit_template()
+        (topic_dir / "audit-report.md").write_text(audit_tmpl.replace("<topic>", topic))
+        (topic_dir / "claims.yaml").write_text(_default_claims_template().replace("<your-agent-name>", _detect_agent_slug()))
+        (topic_dir / "log.md").write_text(f"[{_now()}] {_detect_agent_slug()} | OPENED: {topic}\n")
+        print(f"[athenaeum] Audit scaffold created at {topic_dir}/")
+        print(f"[athenaeum] Next: fill audit-report.md with findings, then run athenaeum diff {topic}")
+
     else:
         print(f"[athenaeum] Unknown mode: {mode}")
         sys.exit(1)
@@ -254,6 +263,34 @@ claims:
     last_verified: 2026-01-01T00:00:00Z
 """
 
+def _default_audit_template() -> str:
+    return """# Audit Report — <topic>
+
+| Field | Value |
+|---|---|
+| Topic | <topic> |
+| Date | <YYYY-MM-DD> |
+| Auditors | <agent-a>, <agent-b>, ... |
+| Mode | quick / formal |
+| Status | draft / converged / signed |
+
+## 1. Goal & success criteria
+**Findings:**
+<!-- What outcome does the collaboration produce, and how do we know it's done? -->
+
+| Confidence | Source | Action item |
+|---|---|---|
+| high / medium / low | `<file:line>` | <what to do> |
+
+## Summary
+### Converged claims
+- <claim-id>: <statement>
+### Disputed claims
+- <claim-id>: <statement>
+### Recommendations
+1. <recommendation>
+"""
+
 
 def main():
     parser = argparse.ArgumentParser(description="Athenaeum CLI")
@@ -261,7 +298,7 @@ def main():
 
     p_init = sub.add_parser("init", help="Scaffold a topic directory")
     p_init.add_argument("topic")
-    p_init.add_argument("--mode", required=True, choices=["design", "reconcile", "ratify"])
+    p_init.add_argument("--mode", required=True, choices=["design", "reconcile", "ratify", "audit"])
     p_init.add_argument("--roster", help="Comma-separated agent slugs (ratify mode)")
     p_init.add_argument("--ratify-mode", default="standard", choices=["standard", "fast"])
     p_init.add_argument("--transport", default="filesystem", choices=["filesystem", "a2a"],

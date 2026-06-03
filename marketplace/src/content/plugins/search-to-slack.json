@@ -13,9 +13,9 @@
     "name": "Claude Code Plugins Team"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/skill-enhancers/search-to-slack",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/skill-enhancers/search-to-slack",
   "license": "MIT",
-  "installation": "/plugin install search-to-slack@claude-code-plugins-plus",
+  "installation": "/plugin install search-to-slack@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

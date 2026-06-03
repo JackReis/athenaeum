@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/mutation-test-runner",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/mutation-test-runner",
   "license": "MIT",
-  "installation": "/plugin install mutation-test-runner@claude-code-plugins-plus",
+  "installation": "/plugin install mutation-test-runner@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

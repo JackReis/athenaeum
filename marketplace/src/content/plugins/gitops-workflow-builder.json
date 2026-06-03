@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/devops/gitops-workflow-builder",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/devops/gitops-workflow-builder",
   "license": "MIT",
-  "installation": "/plugin install gitops-workflow-builder@claude-code-plugins-plus",
+  "installation": "/plugin install gitops-workflow-builder@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

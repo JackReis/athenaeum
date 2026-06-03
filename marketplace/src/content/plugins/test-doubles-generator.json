@@ -17,9 +17,9 @@
     "name": "Claude Code Plugin Hub"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/test-doubles-generator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/test-doubles-generator",
   "license": "MIT",
-  "installation": "/plugin install test-doubles-generator@claude-code-plugins-plus",
+  "installation": "/plugin install test-doubles-generator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

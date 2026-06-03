@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/whale-alert-monitor",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/whale-alert-monitor",
   "license": "MIT",
-  "installation": "/plugin install whale-alert-monitor@claude-code-plugins-plus",
+  "installation": "/plugin install whale-alert-monitor@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

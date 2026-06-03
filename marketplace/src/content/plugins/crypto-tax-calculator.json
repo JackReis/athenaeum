@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/crypto-tax-calculator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/crypto-tax-calculator",
   "license": "MIT",
-  "installation": "/plugin install crypto-tax-calculator@claude-code-plugins-plus",
+  "installation": "/plugin install crypto-tax-calculator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

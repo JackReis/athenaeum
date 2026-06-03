@@ -24,9 +24,9 @@
     "email": "jeremy@intentsolutions.io"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins",
+  "repository": "https://github.com/JackReis/athenaeum",
   "license": "MIT",
-  "installation": "/plugin install fairdb-operations-kit@claude-code-plugins-plus",
+  "installation": "/plugin install fairdb-operations-kit@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/cpu-usage-monitor",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/cpu-usage-monitor",
   "license": "MIT",
-  "installation": "/plugin install cpu-usage-monitor@claude-code-plugins-plus",
+  "installation": "/plugin install cpu-usage-monitor@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

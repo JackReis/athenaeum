@@ -12,9 +12,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/examples/hello-world",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/examples/hello-world",
   "license": "MIT",
-  "installation": "/plugin install hello-world@claude-code-plugins-plus",
+  "installation": "/plugin install hello-world@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

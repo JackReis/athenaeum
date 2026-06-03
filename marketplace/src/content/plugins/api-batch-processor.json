@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/api-batch-processor",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/api-batch-processor",
   "license": "MIT",
-  "installation": "/plugin install api-batch-processor@claude-code-plugins-plus",
+  "installation": "/plugin install api-batch-processor@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

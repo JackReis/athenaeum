@@ -28,9 +28,9 @@
     "email": "jeremy@intentsolutions.io"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/productivity/000-jeremy-content-consistency-validator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/productivity/000-jeremy-content-consistency-validator",
   "license": "MIT",
-  "installation": "/plugin install 000-jeremy-content-consistency-validator@claude-code-plugins-plus",
+  "installation": "/plugin install 000-jeremy-content-consistency-validator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

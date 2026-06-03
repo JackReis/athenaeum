@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/api-event-emitter",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/api-event-emitter",
   "license": "MIT",
-  "installation": "/plugin install api-event-emitter@claude-code-plugins-plus",
+  "installation": "/plugin install api-event-emitter@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

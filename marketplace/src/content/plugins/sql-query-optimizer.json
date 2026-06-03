@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/database/sql-query-optimizer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/database/sql-query-optimizer",
   "license": "MIT",
-  "installation": "/plugin install sql-query-optimizer@claude-code-plugins-plus",
+  "installation": "/plugin install sql-query-optimizer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -13,9 +13,9 @@
     "name": "Claude Code Plugins Team"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/skill-enhancers/calendar-to-workflow",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/skill-enhancers/calendar-to-workflow",
   "license": "MIT",
-  "installation": "/plugin install calendar-to-workflow@claude-code-plugins-plus",
+  "installation": "/plugin install calendar-to-workflow@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

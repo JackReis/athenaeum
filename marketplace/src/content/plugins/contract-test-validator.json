@@ -16,9 +16,9 @@
     "name": "Claude Code Plugin Hub"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/contract-test-validator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/contract-test-validator",
   "license": "MIT",
-  "installation": "/plugin install contract-test-validator@claude-code-plugins-plus",
+  "installation": "/plugin install contract-test-validator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

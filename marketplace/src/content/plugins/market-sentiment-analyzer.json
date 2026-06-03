@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/market-sentiment-analyzer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/market-sentiment-analyzer",
   "license": "MIT",
-  "installation": "/plugin install market-sentiment-analyzer@claude-code-plugins-plus",
+  "installation": "/plugin install market-sentiment-analyzer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

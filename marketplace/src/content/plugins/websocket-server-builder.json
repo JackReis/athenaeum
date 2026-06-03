@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/websocket-server-builder",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/websocket-server-builder",
   "license": "MIT",
-  "installation": "/plugin install websocket-server-builder@claude-code-plugins-plus",
+  "installation": "/plugin install websocket-server-builder@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

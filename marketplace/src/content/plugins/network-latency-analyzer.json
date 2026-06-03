@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/network-latency-analyzer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/network-latency-analyzer",
   "license": "MIT",
-  "installation": "/plugin install network-latency-analyzer@claude-code-plugins-plus",
+  "installation": "/plugin install network-latency-analyzer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

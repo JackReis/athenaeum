@@ -16,9 +16,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/mcp/project-health-auditor",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/mcp/project-health-auditor",
   "license": "MIT",
-  "installation": "/plugin install project-health-auditor@claude-code-plugins-plus",
+  "installation": "/plugin install project-health-auditor@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -17,9 +17,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/crypto-derivatives-tracker",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/crypto-derivatives-tracker",
   "license": "MIT",
-  "installation": "/plugin install crypto-derivatives-tracker@claude-code-plugins-plus",
+  "installation": "/plugin install crypto-derivatives-tracker@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -17,9 +17,9 @@
     "name": "Claude Code Plugins Team"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins",
+  "repository": "https://github.com/JackReis/athenaeum",
   "license": "MIT",
-  "installation": "/plugin install web-to-github-issue@claude-code-plugins-plus",
+  "installation": "/plugin install web-to-github-issue@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

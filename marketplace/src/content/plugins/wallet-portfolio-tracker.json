@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/wallet-portfolio-tracker",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/wallet-portfolio-tracker",
   "license": "MIT",
-  "installation": "/plugin install wallet-portfolio-tracker@claude-code-plugins-plus",
+  "installation": "/plugin install wallet-portfolio-tracker@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

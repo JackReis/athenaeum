@@ -17,9 +17,9 @@
     "name": "Claude Code Plugin Hub"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/mobile-app-tester",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/mobile-app-tester",
   "license": "MIT",
-  "installation": "/plugin install mobile-app-tester@claude-code-plugins-plus",
+  "installation": "/plugin install mobile-app-tester@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

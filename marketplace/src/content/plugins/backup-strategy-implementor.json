@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/devops/backup-strategy-implementor",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/devops/backup-strategy-implementor",
   "license": "MIT",
-  "installation": "/plugin install backup-strategy-implementor@claude-code-plugins-plus",
+  "installation": "/plugin install backup-strategy-implementor@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

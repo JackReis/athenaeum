@@ -16,9 +16,9 @@
     "name": "Claude Code Plugin Hub"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/visual-regression-tester",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/visual-regression-tester",
   "license": "MIT",
-  "installation": "/plugin install visual-regression-tester@claude-code-plugins-plus",
+  "installation": "/plugin install visual-regression-tester@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

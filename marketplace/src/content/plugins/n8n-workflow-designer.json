@@ -13,12 +13,12 @@
   ],
   "author": {
     "name": "Claude Code Plugin Hub",
-    "url": "https://github.com/jeremylongshore/claude-code-plugins"
+    "url": "https://github.com/JackReis/athenaeum"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-agency/n8n-workflow-designer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-agency/n8n-workflow-designer",
   "license": "MIT",
-  "installation": "/plugin install n8n-workflow-designer@claude-code-plugins-plus",
+  "installation": "/plugin install n8n-workflow-designer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -19,9 +19,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/packages/ai-ml-engineering-pack",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/packages/ai-ml-engineering-pack",
   "license": "MIT",
-  "installation": "/plugin install ai-ml-engineering-pack@claude-code-plugins-plus",
+  "installation": "/plugin install ai-ml-engineering-pack@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

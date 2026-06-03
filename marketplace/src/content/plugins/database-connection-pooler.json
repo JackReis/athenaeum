@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/database/database-connection-pooler",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/database/database-connection-pooler",
   "license": "MIT",
-  "installation": "/plugin install database-connection-pooler@claude-code-plugins-plus",
+  "installation": "/plugin install database-connection-pooler@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

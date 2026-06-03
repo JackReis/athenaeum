@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/devops/ci-cd-pipeline-builder",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/devops/ci-cd-pipeline-builder",
   "license": "MIT",
-  "installation": "/plugin install ci-cd-pipeline-builder@claude-code-plugins-plus",
+  "installation": "/plugin install ci-cd-pipeline-builder@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

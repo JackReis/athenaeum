@@ -12,9 +12,9 @@
     "name": "Claude Code Plugins Team"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/skill-enhancers/research-to-deploy",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/skill-enhancers/research-to-deploy",
   "license": "MIT",
-  "installation": "/plugin install research-to-deploy@claude-code-plugins-plus",
+  "installation": "/plugin install research-to-deploy@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

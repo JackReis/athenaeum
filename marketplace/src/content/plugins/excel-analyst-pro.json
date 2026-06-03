@@ -22,9 +22,9 @@
     "email": "plugins@claudecodeplugins.io"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins",
+  "repository": "https://github.com/JackReis/athenaeum",
   "license": "MIT",
-  "installation": "/plugin install excel-analyst-pro@claude-code-plugins-plus",
+  "installation": "/plugin install excel-analyst-pro@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

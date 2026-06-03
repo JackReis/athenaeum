@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-ml/dataset-splitter",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-ml/dataset-splitter",
   "license": "MIT",
-  "installation": "/plugin install dataset-splitter@claude-code-plugins-plus",
+  "installation": "/plugin install dataset-splitter@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/application-profiler",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/application-profiler",
   "license": "MIT",
-  "installation": "/plugin install application-profiler@claude-code-plugins-plus",
+  "installation": "/plugin install application-profiler@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

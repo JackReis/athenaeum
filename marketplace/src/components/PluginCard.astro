@@ -1,9 +1,11 @@
 ---
+import { categoryIcons, categoryColors, type Category } from '../lib/categories';
+
 interface Props {
   name: string;
   description: string;
   version: string;
-  category: string;
+  category: Category;
   keywords: string[];
   author: {
     name: string;
@@ -15,46 +17,6 @@ interface Props {
 }
 
 const { name, description, version, category, keywords, author, featured, installation, repository } = Astro.props;
-
-// Category icon mapping
-const categoryIcons: Record<string, string> = {
-  'automation': '⚙️',
-  'business-tools': '💼',
-  'devops': '🚀',
-  'code-analysis': '🔍',
-  'debugging': '🐛',
-  'ai-ml-assistance': '🤖',
-  'frontend-development': '🎨',
-  'security': '🔒',
-  'testing': '✅',
-  'documentation': '📚',
-  'performance': '⚡',
-  'database': '💾',
-  'cloud-infrastructure': '☁️',
-  'accessibility': '♿',
-  'mobile': '📱',
-  'other': '🔧'
-};
-
-// Category color mapping
-const categoryColors: Record<string, string> = {
-  'automation': 'category-purple',
-  'business-tools': 'category-blue',
-  'devops': 'category-green',
-  'code-analysis': 'category-cyan',
-  'debugging': 'category-red',
-  'ai-ml-assistance': 'category-pink',
-  'frontend-development': 'category-indigo',
-  'security': 'category-orange',
-  'testing': 'category-teal',
-  'documentation': 'category-gray',
-  'performance': 'category-yellow',
-  'database': 'category-violet',
-  'cloud-infrastructure': 'category-sky',
-  'accessibility': 'category-lime',
-  'mobile': 'category-fuchsia',
-  'other': 'category-neutral'
-};
 
 const icon = categoryIcons[category] || '🔧';
 const colorClass = categoryColors[category] || 'category-neutral';
@@ -253,6 +215,7 @@ const colorClass = categoryColors[category] || 'category-neutral';
 
   /* Category colors */
   .category-green { background: rgba(16, 185, 129, 0.15); color: var(--green-400); border: 1px solid rgba(16, 185, 129, 0.3); }
+  .category-emerald { background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
   .category-blue { background: rgba(59, 130, 246, 0.15); color: var(--blue-400); border: 1px solid rgba(59, 130, 246, 0.3); }
   .category-purple { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3); }
   .category-cyan { background: rgba(6, 182, 212, 0.15); color: #06b6d4; border: 1px solid rgba(6, 182, 212, 0.3); }

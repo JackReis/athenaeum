@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/devops/environment-config-manager",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/devops/environment-config-manager",
   "license": "MIT",
-  "installation": "/plugin install environment-config-manager@claude-code-plugins-plus",
+  "installation": "/plugin install environment-config-manager@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-ml/deep-learning-optimizer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-ml/deep-learning-optimizer",
   "license": "MIT",
-  "installation": "/plugin install deep-learning-optimizer@claude-code-plugins-plus",
+  "installation": "/plugin install deep-learning-optimizer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

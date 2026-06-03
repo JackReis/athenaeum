@@ -22,6 +22,8 @@ Or clone and symlink into your agent's `skills/` directory.
 | `athenaeum-reconcile` | Multi-agent state reconciliation | Two+ agents disagree; triangulate across models |
 | `athenaeum-ratify` | Fleet attestation with dissent recording | N agents must sign off on an immutable artifact |
 
+| `athenaeum-audit` | Code-aware agent-stack audit + reconcile in one pass | Reviewing existing architecture; triangulate understanding |
+
 ## Quick decision tree
 
 ```
@@ -30,6 +32,7 @@ Who is debating?
 ├── Two+ agents disagree → athenaeum-reconcile
 │   └── Low stakes? → quick mode (no crypto)
 │   └── High stakes? → formal mode (SHA-256 sign-offs)
+├── Review existing stack → athenaeum-audit
 └── Whole fleet must approve → athenaeum-ratify
     └── Unanimous? → ratified
     └── Dissent? → decomposed to human grain-gate
@@ -44,6 +47,7 @@ Each skill includes a unified CLI:
 athenaeum init my-topic --mode design
 athenaeum init my-topic --mode reconcile
 athenaeum init my-topic --mode ratify --roster agent-alpha,agent-beta,agent-gamma
+athenaeum init my-topic --mode audit
 
 athenaeum diff my-topic
 athenaeum sign my-topic
@@ -76,6 +80,5 @@ athenaeum/
 ## Roadmap / open questions
 
 - [ ] Package for `npx skills add`
-- [ ] Add `athenaeum-audit` (code-aware agent-stack audit + reconcile in one pass)
 - [ ] Star-topology multi-peer reconciliation (currently pairwise chains only)
 - [ ] Auto-discovery of fleet roster from `~/Documents/Coordination/` or env var

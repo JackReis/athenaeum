@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/rest-api-generator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/rest-api-generator",
   "license": "MIT",
-  "installation": "/plugin install rest-api-generator@claude-code-plugins-plus",
+  "installation": "/plugin install rest-api-generator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

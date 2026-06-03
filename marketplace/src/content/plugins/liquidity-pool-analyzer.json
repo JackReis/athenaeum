@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/liquidity-pool-analyzer",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/liquidity-pool-analyzer",
   "license": "MIT",
-  "installation": "/plugin install liquidity-pool-analyzer@claude-code-plugins-plus",
+  "installation": "/plugin install liquidity-pool-analyzer@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

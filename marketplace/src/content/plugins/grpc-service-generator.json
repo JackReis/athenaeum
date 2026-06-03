@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/grpc-service-generator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/grpc-service-generator",
   "license": "MIT",
-  "installation": "/plugin install grpc-service-generator@claude-code-plugins-plus",
+  "installation": "/plugin install grpc-service-generator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

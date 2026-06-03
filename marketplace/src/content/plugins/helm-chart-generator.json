@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/devops/helm-chart-generator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/devops/helm-chart-generator",
   "license": "MIT",
-  "installation": "/plugin install helm-chart-generator@claude-code-plugins-plus",
+  "installation": "/plugin install helm-chart-generator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

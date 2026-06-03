@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/devops/infrastructure-as-code-generator",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/devops/infrastructure-as-code-generator",
   "license": "MIT",
-  "installation": "/plugin install infrastructure-as-code-generator@claude-code-plugins-plus",
+  "installation": "/plugin install infrastructure-as-code-generator@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

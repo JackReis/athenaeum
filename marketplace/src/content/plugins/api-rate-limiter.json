@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/api-rate-limiter",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/api-rate-limiter",
   "license": "MIT",
-  "installation": "/plugin install api-rate-limiter@claude-code-plugins-plus",
+  "installation": "/plugin install api-rate-limiter@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

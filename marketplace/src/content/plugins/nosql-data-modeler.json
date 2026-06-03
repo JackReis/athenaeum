@@ -12,9 +12,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/database/nosql-data-modeler",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/database/nosql-data-modeler",
   "license": "MIT",
-  "installation": "/plugin install nosql-data-modeler@claude-code-plugins-plus",
+  "installation": "/plugin install nosql-data-modeler@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

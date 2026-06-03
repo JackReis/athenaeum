@@ -12,9 +12,9 @@
     "name": "Claude Code Plugin Hub"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/examples/formatter",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/examples/formatter",
   "license": "MIT",
-  "installation": "/plugin install formatter@claude-code-plugins-plus",
+  "installation": "/plugin install formatter@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

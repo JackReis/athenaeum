@@ -15,9 +15,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/api-test-automation",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/api-test-automation",
   "license": "MIT",
-  "installation": "/plugin install api-test-automation@claude-code-plugins-plus",
+  "installation": "/plugin install api-test-automation@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/real-user-monitoring",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/real-user-monitoring",
   "license": "MIT",
-  "installation": "/plugin install real-user-monitoring@claude-code-plugins-plus",
+  "installation": "/plugin install real-user-monitoring@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

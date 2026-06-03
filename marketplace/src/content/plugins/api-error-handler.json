@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/api-development/api-error-handler",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/api-development/api-error-handler",
   "license": "MIT",
-  "installation": "/plugin install api-error-handler@claude-code-plugins-plus",
+  "installation": "/plugin install api-error-handler@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

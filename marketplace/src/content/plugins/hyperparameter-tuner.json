@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-ml/hyperparameter-tuner",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-ml/hyperparameter-tuner",
   "license": "MIT",
-  "installation": "/plugin install hyperparameter-tuner@claude-code-plugins-plus",
+  "installation": "/plugin install hyperparameter-tuner@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

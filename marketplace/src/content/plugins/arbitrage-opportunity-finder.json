@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/crypto/arbitrage-opportunity-finder",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/crypto/arbitrage-opportunity-finder",
   "license": "MIT",
-  "installation": "/plugin install arbitrage-opportunity-finder@claude-code-plugins-plus",
+  "installation": "/plugin install arbitrage-opportunity-finder@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

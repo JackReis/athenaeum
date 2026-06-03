@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-ml/computer-vision-processor",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-ml/computer-vision-processor",
   "license": "MIT",
-  "installation": "/plugin install computer-vision-processor@claude-code-plugins-plus",
+  "installation": "/plugin install computer-vision-processor@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

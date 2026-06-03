@@ -16,9 +16,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": true,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/mcp/domain-memory-agent",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/mcp/domain-memory-agent",
   "license": "MIT",
-  "installation": "/plugin install domain-memory-agent@claude-code-plugins-plus",
+  "installation": "/plugin install domain-memory-agent@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

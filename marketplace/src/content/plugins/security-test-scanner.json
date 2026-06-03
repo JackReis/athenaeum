@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/testing/security-test-scanner",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/testing/security-test-scanner",
   "license": "MIT",
-  "installation": "/plugin install security-test-scanner@claude-code-plugins-plus",
+  "installation": "/plugin install security-test-scanner@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

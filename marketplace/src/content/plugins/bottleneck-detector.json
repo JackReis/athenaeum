@@ -13,9 +13,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/performance/bottleneck-detector",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/performance/bottleneck-detector",
   "license": "MIT",
-  "installation": "/plugin install bottleneck-detector@claude-code-plugins-plus",
+  "installation": "/plugin install bottleneck-detector@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []

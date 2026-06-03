@@ -14,9 +14,9 @@
     "name": "Jeremy Longshore"
   },
   "featured": false,
-  "repository": "https://github.com/jeremylongshore/claude-code-plugins/tree/main/./plugins/ai-ml/neural-network-builder",
+  "repository": "https://github.com/JackReis/athenaeum/tree/main/./plugins/ai-ml/neural-network-builder",
   "license": "MIT",
-  "installation": "/plugin install neural-network-builder@claude-code-plugins-plus",
+  "installation": "/plugin install neural-network-builder@athenaeum",
   "features": [],
   "requirements": [],
   "screenshots": []
