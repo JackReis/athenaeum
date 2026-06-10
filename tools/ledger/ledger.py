@@ -203,7 +203,9 @@ def cmd_append_commit(args: argparse.Namespace) -> int:
         )
         built.append((timestamp, entry))
 
-    # git log is newest-first; write entries oldest-first.
+    # git log is newest-first; reverse first so that commits sharing an
+    # identical timestamp keep oldest-first order under the stable sort.
+    built.reverse()
     built.sort(key=lambda pair: pair[0])
     entries = [entry for _, entry in built]
 

@@ -659,6 +659,21 @@ class TestCmdAppendCommit:
         assert len(timestamps) == 3
         assert timestamps == sorted(timestamps)
 
+    def test_identical_timestamps_keep_oldest_first(self, env_tracking, git_repo):
+        # Two commits with the EXACT same authored timestamp. git log lists
+        # them newest-first ("beta" then "alpha"); a stable sort alone would
+        # preserve that. Reversing before the sort must yield commit-creation
+        # (oldest-first) order: alpha, beta.
+        same = "2026-05-04 10:00:00 +0000"
+        repo = git_repo([(same, "alpha"), (same, "beta")])
+        args = L.build_parser().parse_args(["append-commit", "--repo", str(repo), "--count", "10"])
+        assert L.cmd_append_commit(args) == 0
+
+        content = (env_tracking / "commit-log.md").read_text()
+        descriptions = [l.split("**Description:**", 1)[1].strip()
+                        for l in content.split("\n") if "**Description:**" in l]
+        assert descriptions == ["alpha", "beta"]
+
     # WI-3: Session/Deliverable populated and round-trip through _parse_entries.
     def test_session_and_deliverable_populated(self, env_tracking, git_repo, monkeypatch):
         monkeypatch.setenv("LEDGER_SESSION_ID", "ses-x")
