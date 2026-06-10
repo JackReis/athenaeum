@@ -569,7 +569,31 @@ class TestCmdProjectCost:
         assert "Monthly projected" in out
 
     def test_project_cost_by_model(self, env_tracking, capsys):
-        _write_token_ledger(env_tracking / "token-ledger.md", SAMPLE_TOKEN_ENTRIES)
+        # Build entries dated relative to "now" so the --days window always
+        # brackets them; the fixed-date SAMPLE_TOKEN_ENTRIES ages out over time.
+        def _recent(days_ago: int) -> str:
+            return (datetime.now(timezone.utc) - timedelta(days=days_ago)
+                    ).strftime("%Y-%m-%dT%H:%M:%SZ")
+        entries = textwrap.dedent(f"""\
+            ### {_recent(1)}
+            - **Agent:** opencode
+            - **Model:** claude-sonnet-4-20250514
+            - **Tokens In:** 50000
+            - **Tokens Out:** 12000
+
+            ### {_recent(2)}
+            - **Agent:** kimi
+            - **Model:** kimi-k2
+            - **Tokens In:** 16000
+            - **Tokens Out:** 316
+
+            ### {_recent(3)}
+            - **Agent:** opencode
+            - **Model:** glm-5.1
+            - **Tokens In:** 80000
+            - **Tokens Out:** 20000
+            """)
+        _write_token_ledger(env_tracking / "token-ledger.md", entries)
         args = L.build_parser().parse_args(["project-cost", "--days", "30"])
         L.cmd_project_cost(args)
         out = capsys.readouterr().out
