@@ -143,10 +143,27 @@ def _format_entry(
 # ── append-commit ──────────────────────────────────────────────────
 
 
+def _git_date_to_iso(date_iso: str) -> str | None:
+    """Normalize a git `%ai` date to UTC ISO-8601 (`YYYY-MM-DDTHH:MM:SSZ`).
+
+    Git emits dates like `2026-05-29 15:46:38 +0000` (two spaces, signed
+    offset). Parse with the offset, convert to UTC, and format with a
+    trailing `Z`. Returns None for unparseable input so callers can skip it.
+    """
+    try:
+        dt = datetime.strptime(date_iso.strip(), "%Y-%m-%d %H:%M:%S %z")
+    except ValueError:
+        return None
+    return dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def cmd_append_commit(args: argparse.Namespace) -> int:
     """Populate commit-log from recent git log."""
     repo = Path(args.repo) if args.repo else Path.cwd()
     count = args.count or 10
+    session = (getattr(args, "session", None)
+               or os.environ.get("LEDGER_SESSION_ID", "")) or "-"
+    deliverable = getattr(args, "deliverable", None) or "-"
     try:
         result = subprocess.run(
             ["git", "log", f"--max-count={count}", "--pretty=format:%H|%an|%ai|%s"],
@@ -162,7 +179,7 @@ def cmd_append_commit(args: argparse.Namespace) -> int:
     path = _ledger_path("commit")
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    entries = []
+    built: list[tuple[str, str]] = []
     for line in result.stdout.strip().split("\n"):
         if not line:
             continue
@@ -170,16 +187,25 @@ def cmd_append_commit(args: argparse.Namespace) -> int:
         if len(parts) < 4:
             continue
         sha, author, date_iso, subject = parts
-        timestamp = date_iso.replace(" ", "T").split("+")[0] + "Z" if "+" in date_iso else date_iso + "Z"
-        entries.append(
-            f"\n### {timestamp}\n"
-            f"- **Commit:** {sha[:12]}\n"
-            f"- **Agent:** {author}\n"
-            f"- **Session:** \n"
-            f"- **Files Changed:** (from git)\n"
-            f"- **Description:** {subject}\n"
-            f"- **Deliverable:** "
+        timestamp = _git_date_to_iso(date_iso)
+        if timestamp is None:
+            print(f"[ledger] skipping commit with unparseable date: {date_iso!r}",
+                  file=sys.stderr)
+            continue
+        entry = _format_entry(
+            "commit", timestamp, author, "", session,
+            {
+                "commit": sha[:12],
+                "files_changed": "(from git)",
+                "description": subject,
+                "deliverable": deliverable,
+            },
         )
+        built.append((timestamp, entry))
+
+    # git log is newest-first; write entries oldest-first.
+    built.sort(key=lambda pair: pair[0])
+    entries = [entry for _, entry in built]
 
     with path.open("a", encoding="utf-8") as fh:
         fh.write("\n".join(entries) + "\n")
@@ -481,6 +507,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_ac = sub.add_parser("append-commit", help="Populate commit-log from git log")
     p_ac.add_argument("--repo", help="Path to git repo (default: cwd)")
     p_ac.add_argument("--count", type=int, default=10, help="Number of recent commits")
+    p_ac.add_argument("--session", help="Session ID (default: $LEDGER_SESSION_ID)")
+    p_ac.add_argument("--deliverable", help="Deliverable tag for these commits")
 
     # rotate
     p_rotate = sub.add_parser("rotate", help="Move old entries to archive")

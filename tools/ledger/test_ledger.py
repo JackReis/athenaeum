@@ -43,6 +43,40 @@ def env_tracking(tmp_tracking, monkeypatch):
     return tmp_tracking
 
 
+@pytest.fixture
+def git_repo(tmp_path):
+    """Create a git repo with deterministic commits covering both offset signs.
+
+    Returns a factory that, given a list of (date, subject) pairs, creates one
+    commit per pair with that authored/committed date, and returns the repo path.
+    `date` strings are passed verbatim to GIT_AUTHOR_DATE/GIT_COMMITTER_DATE,
+    so callers control the timezone offset (e.g. "-0500" or "+0000").
+    """
+    repo = tmp_path / "gitrepo"
+    repo.mkdir()
+
+    def run(cmd, **kwargs):
+        return subprocess.run(cmd, cwd=repo, check=True,
+                              capture_output=True, text=True, **kwargs)
+
+    run(["git", "init", "-q"])
+    run(["git", "config", "user.name", "Test Bot"])
+    run(["git", "config", "user.email", "test@example.com"])
+    run(["git", "config", "commit.gpgsign", "false"])
+
+    def make_commits(commits):
+        for i, (date, subject) in enumerate(commits):
+            (repo / f"file{i}.txt").write_text(f"content {i}\n", encoding="utf-8")
+            run(["git", "add", "-A"])
+            env = dict(os.environ)
+            env["GIT_AUTHOR_DATE"] = date
+            env["GIT_COMMITTER_DATE"] = date
+            run(["git", "commit", "-q", "-m", subject], env=env)
+        return repo
+
+    return make_commits
+
+
 def _write_token_ledger(path: Path, entries: str) -> None:
     content = "# Token Ledger\n\n" + entries + "\n"
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -169,6 +203,39 @@ class TestParseEntries:
         assert len(entries) == 1
         assert entries[0]["agent"] == "opencode"
         assert entries[0]["tokens_in"] == "50000"
+
+    def test_parse_legacy_malformed_headings(self):
+        """Backward-compat: old bug produced malformed timestamps in headings.
+
+        Existing commit-log.md files in the wild contain headings like
+        '### 2026-05-29T15:46:38TZ' (stray T before Z) and
+        '### 2026-05-27 19:09:40 -0500Z' (space-separated + raw offset + blind Z).
+        The parser must still salvage at least the date portion so old logs
+        don't break. Characterization: assert timestamp[:10] is the correct day.
+        """
+        content = textwrap.dedent("""\
+            ### 2026-05-29T15:46:38TZ
+            - **Commit:** deadbeef0001
+            - **Agent:** opencode
+            - **Session:** ses-legacy-1
+            - **Files Changed:** 2
+            - **Description:** legacy stray-T entry
+            - **Deliverable:** JAC-31
+
+            ### 2026-05-27 19:09:40 -0500Z
+            - **Commit:** deadbeef0002
+            - **Agent:** kimi
+            - **Session:** ses-legacy-2
+            - **Files Changed:** 1
+            - **Description:** legacy space-separated entry
+            - **Deliverable:** JAC-31
+            """)
+        entries = L._parse_entries("commit", content)
+        assert len(entries) == 2
+        assert entries[0]["timestamp"][:10] == "2026-05-29"
+        assert entries[0]["commit"] == "deadbeef0001"
+        assert entries[1]["timestamp"][:10] == "2026-05-27"
+        assert entries[1]["commit"] == "deadbeef0002"
 
 
 # ── Tests: _format_entry ──────────────────────────────────────────────
@@ -452,6 +519,41 @@ class TestCmdQuery:
         result = L.cmd_query(args)
         assert result == 0
 
+    def test_query_date_range_with_legacy_entries(self, env_tracking, capsys):
+        """Day-granularity date filtering must still bracket legacy malformed entries.
+
+        Seeds a commit-log.md with the two malformed heading forms produced by
+        the old bug, then queries a date range bracketing both. Both must come
+        back, confirming --from-date/--to-date filtering (which compares
+        timestamp[:10]) tolerates the salvaged legacy timestamps.
+        """
+        legacy_entries = textwrap.dedent("""\
+            ### 2026-05-29T15:46:38TZ
+            - **Commit:** deadbeef0001
+            - **Agent:** opencode
+            - **Session:** ses-legacy-1
+            - **Files Changed:** 2
+            - **Description:** legacy stray-T entry
+            - **Deliverable:** JAC-31
+
+            ### 2026-05-27 19:09:40 -0500Z
+            - **Commit:** deadbeef0002
+            - **Agent:** kimi
+            - **Session:** ses-legacy-2
+            - **Files Changed:** 1
+            - **Description:** legacy space-separated entry
+            - **Deliverable:** JAC-31
+            """)
+        _write_commit_ledger(env_tracking / "commit-log.md", legacy_entries)
+        args = L.build_parser().parse_args(
+            ["query", "commit", "--from-date", "2026-05-27", "--to-date", "2026-05-29", "--json"])
+        result = L.cmd_query(args)
+        assert result == 0
+        parsed = json.loads(capsys.readouterr().out)
+        assert len(parsed) == 2
+        commits = {e["commit"] for e in parsed}
+        assert commits == {"deadbeef0001", "deadbeef0002"}
+
 
 # ── Tests: cmd_project_cost ───────────────────────────────────────────
 
@@ -517,6 +619,74 @@ class TestCmdAppendCommit:
         args = L.build_parser().parse_args(["append-commit", "--repo", str(empty_dir), "--count", "1"])
         result = L.cmd_append_commit(args)
         assert result == 1
+
+    # WI-1: timestamp normalization to UTC ISO-8601 with trailing Z.
+    def test_timestamps_are_utc_iso8601(self, env_tracking, git_repo):
+        import re as _re
+        repo = git_repo([
+            ("2026-05-27 19:09:40 -0500", "negative offset commit"),
+            ("2026-05-29 15:46:38 +0000", "zero offset commit"),
+        ])
+        args = L.build_parser().parse_args(["append-commit", "--repo", str(repo), "--count", "10"])
+        assert L.cmd_append_commit(args) == 0
+
+        content = (env_tracking / "commit-log.md").read_text()
+        headings = [l for l in content.split("\n") if l.startswith("### ")]
+        assert headings, "expected at least one ### heading"
+        pat = _re.compile(r"^### \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+        for h in headings:
+            assert pat.match(h), f"heading not strict ISO-8601 UTC: {h!r}"
+
+        timestamps = {h[len("### "):] for h in headings}
+        # -0500 19:09:40 -> +5h -> next day 00:09:40 UTC; +0000 unchanged.
+        assert "2026-05-28T00:09:40Z" in timestamps
+        assert "2026-05-29T15:46:38Z" in timestamps
+
+    # WI-2: entries written oldest-first (git log is newest-first).
+    def test_entries_appended_oldest_first(self, env_tracking, git_repo):
+        import re as _re
+        repo = git_repo([
+            ("2026-05-01 10:00:00 +0000", "first"),
+            ("2026-05-02 10:00:00 +0000", "second"),
+            ("2026-05-03 10:00:00 +0000", "third"),
+        ])
+        args = L.build_parser().parse_args(["append-commit", "--repo", str(repo), "--count", "10"])
+        assert L.cmd_append_commit(args) == 0
+
+        content = (env_tracking / "commit-log.md").read_text()
+        pat = _re.compile(r"^### (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)$")
+        timestamps = [m.group(1) for l in content.split("\n") if (m := pat.match(l))]
+        assert len(timestamps) == 3
+        assert timestamps == sorted(timestamps)
+
+    # WI-3: Session/Deliverable populated and round-trip through _parse_entries.
+    def test_session_and_deliverable_populated(self, env_tracking, git_repo, monkeypatch):
+        monkeypatch.setenv("LEDGER_SESSION_ID", "ses-x")
+        repo = git_repo([("2026-05-10 12:00:00 +0000", "feature work")])
+        args = L.build_parser().parse_args(
+            ["append-commit", "--repo", str(repo), "--count", "1", "--deliverable", "JAC-31"])
+        assert L.cmd_append_commit(args) == 0
+
+        content = (env_tracking / "commit-log.md").read_text()
+        assert "- **Session:** ses-x" in content
+        assert "- **Deliverable:** JAC-31" in content
+
+        parsed = L._parse_entries("commit", content)
+        assert parsed[0]["session"] == "ses-x"
+        assert parsed[0]["deliverable"] == "JAC-31"
+
+    def test_session_and_deliverable_placeholder_roundtrip(self, env_tracking, git_repo, monkeypatch):
+        monkeypatch.delenv("LEDGER_SESSION_ID", raising=False)
+        repo = git_repo([("2026-05-11 12:00:00 +0000", "no metadata")])
+        args = L.build_parser().parse_args(["append-commit", "--repo", str(repo), "--count", "1"])
+        assert L.cmd_append_commit(args) == 0
+
+        content = (env_tracking / "commit-log.md").read_text()
+        parsed = L._parse_entries("commit", content)
+        # Placeholder ("-") must render and round-trip (guards kv_pattern
+        # silently dropping empty values).
+        assert parsed[0].get("session") == "-"
+        assert parsed[0].get("deliverable") == "-"
 
 
 # ── Tests: _parse_duration_minutes ────────────────────────────────────
