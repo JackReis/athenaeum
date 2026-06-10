@@ -1,6 +1,6 @@
 ---
 name: athenaeum-ratify
-description: Fleet-wide formal attestation of an immutable artifact with dissent recorded, not overruled. Use when a decision needs N-agent sign-off, when chaining ratification onto a converged grill result, or when an ADR/convention should not ship on one agent's say-so. Triggers — "fleet sign off", "ratify this", "N agents approve", "get the fleet's attestation".
+description: Streamlined single-pack fleet attestation — formal sign-off on an immutable artifact with dissent recorded, not overruled, via the consolidated athenaeum path. Use to chain ratification onto a converged athenaeum result, or when an ADR/convention needs N-agent attestation and you want the athenaeum protocol. Triggers — "athenaeum ratify", "ratify via athenaeum", "athenaeum attestation". If the grill-each-other pack is installed and you want the modular primitive instead, use fleet-ratify (artifact sign-off) or permutation (NxN topology).
 ---
 
 # Athenaeum — Ratify

@@ -1,6 +1,6 @@
 ---
 name: athenaeum-audit
-description: Code-aware agent-stack audit + reconcile in one pass. Use when auditing an existing agent topology, reviewing a fleet setup, or triangulating understanding of a codebase's agent architecture across model families. Triggers — "audit the stack", "agent topology review", "fleet audit", "review agent architecture", "triangulate agent state".
+description: Streamlined single-pack code-aware agent-stack audit + reconcile in one pass — the consolidated athenaeum path for triangulating a codebase's agent architecture across model families. Use when auditing an existing agent topology or reviewing a fleet setup and you want the athenaeum protocol. Triggers — "athenaeum audit", "audit the stack via athenaeum", "athenaeum agent-stack review". If the grill-each-other pack is installed and you want the modular primitives instead, use grill-me-with-agents (single-agent code-aware audit) then peer-grill-with-agents (two-agent triangulation).
 ---
 
 # Athenaeum — Audit

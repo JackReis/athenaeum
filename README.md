@@ -1,8 +1,8 @@
 # Athenaeum
 
-> Agent consensus and skill-pack marketplace for Claude Code — 5 packs, 26 published skills, no inherited marketplace bloat.
+> Agent consensus and skill-pack marketplace for Claude Code — 5 packs, 27 published skills, no inherited marketplace bloat.
 
-[![Skills](https://img.shields.io/badge/skills-26-blue)](plugins/)
+[![Skills](https://img.shields.io/badge/skills-27-blue)](plugins/)
 [![Packs](https://img.shields.io/badge/packs-5-green)](plugins/)
 [![2025 Schema](https://img.shields.io/badge/2025%20Schema-100%25-success)](SKILLS_SCHEMA_2025.md)
 
@@ -37,7 +37,7 @@ The “grill” family moves fast, so this README is explicit about what is in t
 |---|---|---:|---|
 | `autonomous-ai-agents` v0.4.0 | `ai-agency` | 3 + 2 MCP bridges | Fleet identity plus Hermes/OpenClaw messaging bridges. |
 | `grill-each-other` v1.3.1 | `skill-enhancers` | 10 | Modular dialectic skills for grilling, peer reconciliation, ratification, vocabulary, and topology. |
-| `athenaeum` v0.2.0 | `skill-enhancers` | 4 | Streamlined design/reconcile/ratify/audit protocol with CLI and A2A support. |
+| `athenaeum` v0.2.0 | `skill-enhancers` | 5 | Streamlined design/reconcile/ratify/audit protocol with CLI and A2A support, plus the `smart-graph` vault analyzer. |
 | `leonardo` v1.1.0 | `ai-agency` | 1 | Protected-string encode/decode with audit signaling. |
 | `pocock-engineering` v1.0.0 | `skill-enhancers` | 8 | Engineering workflow skills derived from Matt Pocock’s framework. |
 
@@ -66,7 +66,7 @@ The “grill” family moves fast, so this README is explicit about what is in t
 | `permutation` | Ratifies the NxN relationship matrix for a fleet topology. |
 | `dialectic-vocabulary` | Defines the scholastic/Greek vocabulary used by the dialectic protocols. |
 
-### `athenaeum` — 4 published skills
+### `athenaeum` — 5 published skills
 
 | Skill | What it does |
 |---|---|
@@ -74,6 +74,7 @@ The “grill” family moves fast, so this README is explicit about what is in t
 | `athenaeum-reconcile` | Structured reconciliation when parallel agents or models disagree. |
 | `athenaeum-ratify` | Fleet-wide formal attestation of an immutable artifact with dissent recorded. |
 | `athenaeum-audit` | Code-aware agent-stack audit plus reconcile in one pass. |
+| `smart-graph` | Vault relationship analyzer — backlinks, orphaned notes, heading structure, and hub-note discovery. |
 
 ### `leonardo` — 1 skill
 
@@ -137,6 +138,8 @@ athenaeum init my-topic --mode design --transport a2a  # filesystem + A2A task
 ## Architecture and schema
 
 All published skills follow the 2025 skill schema: `name` and `description` as the portable minimum, with `allowed-tools`, `version`, plugin manifests, commands, hooks, and MCP entries treated as adapter/package fields.
+
+> The **2025 Schema 100%** badge means every skill meets that portable minimum (`name` + `description`). `allowed-tools` and `version` are optional adapter fields and are not required for compliance, so most skills omit them.
 
 Useful entry points:
 

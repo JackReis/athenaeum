@@ -1,6 +1,6 @@
 ---
 name: athenaeum-design
-description: Rigorous design grilling for agent stacks, architectures, and plans. Use when designing a multi-agent collaboration, subagent topology, fleet roster, or any complex plan that needs branch-by-branch resolution. Triggers — "design my agents", "grill this plan", "agent topology", "stress-test this architecture".
+description: Streamlined single-pack design grilling for agent stacks, architectures, and plans — the opinionated quick path with a unified CLI and A2A transport. Use for branch-by-branch resolution of a multi-agent collaboration, subagent topology, fleet roster, or complex plan when you want the consolidated athenaeum protocol. Triggers — "athenaeum design", "design via athenaeum", "athenaeum grill the plan". If the grill-each-other pack is installed and you want modular primitives instead, use grill-me (generic plans) or grill-me-agents (agent topology).
 ---
 
 # Athenaeum — Design
