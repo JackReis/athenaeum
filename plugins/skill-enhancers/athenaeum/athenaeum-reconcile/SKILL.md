@@ -1,6 +1,6 @@
 ---
 name: athenaeum-reconcile
-description: Streamlined single-pack reconciliation when two or more agents hold divergent understanding — the consolidated athenaeum path to a structured file-based convergence protocol across model families. Use when parallel sessions disagree or a non-Claude peer needs to converge with a Claude session and you want the athenaeum protocol. Triggers — "athenaeum reconcile", "reconcile via athenaeum", "converge the agents". If the grill-each-other pack is installed and you want the modular primitive instead, use peer-grill (state reconciliation) or peer-grill-with-agents (code-anchored agent-stack triangulation).
+description: Streamlined single-pack reconciliation when two or more agents hold divergent understanding — the consolidated athenaeum path to a structured file-based convergence protocol across model families. Use when parallel sessions disagree or a non-Claude peer needs to converge with a Claude session and you want the athenaeum protocol. Triggers — "athenaeum reconcile", "reconcile via athenaeum", "athenaeum converge". If the grill-each-other pack is installed and you want the modular primitive instead, use peer-grill (state reconciliation) or peer-grill-with-agents (code-anchored agent-stack triangulation).
 ---
 
 # Athenaeum — Reconcile
