@@ -179,6 +179,6 @@ A2A-native Athenaeum agents can interoperate with filesystem-only agents:
 
 - A2A agent creates Task → filesystem agent reads `task.json` and acts
 - Filesystem agent writes YAML → A2A agent polls `tasks/get` for updates
-- The Athenaeum can translate between A2A JSON-RPC and filesystem events
+- The rbitr can translate between A2A JSON-RPC and filesystem events
 
 No agent is required to implement A2A. The filesystem is the floor.

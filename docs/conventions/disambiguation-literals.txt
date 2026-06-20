@@ -1,0 +1,45 @@
+# disambiguation-literals.txt
+# Canonical exact strings. Annex to disambiguation-glossary.md / .json.
+# Purpose: pin literals so they never drift across docs. Copy verbatim; never paraphrase.
+# Format: KEY = literal value   (one per line, # for comments)
+# Updated: 2026-05-15   Author: claude-code
+
+# --- vault paths ---
+VAULT_PATH            = /Users/jack.reis/Documents/=notes
+VAULT_SHELL_ESCAPED   = ~/Documents/\=notes
+SESSION_HANDOFFS_DIR  = claude/mcp-coordination/state/session-handoffs/
+OBN_CHROMA_DB         = claude/scheduled-tasks/vault-ingest/chroma_db_v2
+FLEET_IDENTITY_SOT    = ~/Documents/Coordination/*-identity-mapping.md
+COORDINATION_CONTRACT = tipi/contract/consciousness-interface.json
+
+# --- runtimes / python ---
+MCP_VENV_PYTHON       = /Users/jack.reis/.mcp-venv/bin/python3
+
+# --- memory / search systems ---
+OB1_MCP_NAME          = open-brain
+OBN_NAME              = OBn
+KHOJ_URL              = http://localhost:42110
+
+# --- service endpoints ---
+TYPINGMIND_SELFHOST   = localhost:3001
+BEEPER_MCP            = localhost:23373
+CONDUIT_MATRIX        = 127.0.0.1:6167
+CONDUIT_MATRIX_USER   = @jack:olivier-mbp.localdomain
+CORTEX_FRONT          = cortex.jack.digital
+
+# --- code intelligence ---
+LEGACY_CODE_INDEXER_INDEX_NAME   = neural-garden
+
+# --- work tracking ---
+LINEAR_PARENT_ISSUE   = JAC-10
+
+# --- shell aliases (not to be confused with each other or with n8n) ---
+ALIAS_CLAUDE_CODE     = n        # also: cn  (cn -p <profile> selects MCP profile)
+ALIAS_TMUX_WORKBENCH  = w
+TOOL_N8N              = n8n      # workflow engine / fleet bus -- NOT a shell alias
+
+# --- fleet runtime <-> surface pairs (runtime = local process, surface = Discord) ---
+PAIR_HERMES           = Hermes  <-> Wings
+PAIR_PT               = PT      <-> Neo
+PAIR_OLIVIER          = OLIVIER_MBP <-> Zoe
+PAIR_OPENCODE         = OpenCode <-> Arbiter

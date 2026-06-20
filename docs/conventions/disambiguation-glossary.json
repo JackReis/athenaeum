@@ -1,0 +1,127 @@
+{
+  "$comment": "Machine-readable sidecar of disambiguation-glossary.md. The .md is SSOT for meaning; disambiguation-literals.txt is SSOT for exact spelling. Keep all three in sync.",
+  "version": "1.0.0",
+  "updated": "2026-05-15",
+  "author": "claude-code",
+  "meta_rule": "A name was reused, renamed, or split across systems and the old meaning was never retired. When a glossary term is load-bearing, resolve it against the freshest SSOT (SESSION-CONTEXT.md / vault CLAUDE.md), state the interpretation in the first line of response, and proceed. Ask only when senses are 50/50 or guessing wrong is asymmetric and expensive.",
+  "terms": [
+    {
+      "term": "Ghost Models",
+      "meanings": [
+        { "sense": "GPT-5.4 / 5.5 / Gemini 2.5 are hallucinations/aspirational. Live stack is Gemini 1.5 and Claude 3.5.", "ssot": "AGENTS.md", "cue": "GPT-5, Gemini 2.5" }
+      ],
+      "ssot": "AGENTS.md",
+      "resolution": "Prune stale model claims. Current PT runtime is gemini-1.5-flash. Do not attempt to route to non-existent models."
+    },
+    {
+      "term": "Identity Hierarchy",
+      "meanings": [
+        { "sense": "Olivier (Soul) - the underlying OtterBot creature persona.", "ssot": "IDENTITY.md", "cue": "soul, creature, vibe" },
+        { "sense": "Neo/PT (Masks) - the runtime roles (Orchestrator/Lead Engineer).", "ssot": "IDENTITY.md", "cue": "role, mask, runtime" }
+      ],
+      "ssot": "IDENTITY.md",
+      "resolution": "Olivier is 'who I am'; Neo/PT is 'what I do'. Resolve based on tool surface (CLI=PT, Discord=Neo)."
+    },
+    {
+      "term": "PT",
+      "meanings": [
+        { "sense": "Gemini CLI runtime — dissent agent 'Pete Trump'", "ssot": "=notes/CLAUDE.md", "cue": "dispatch, review, dissent, fleet, ticket" },
+        { "sense": "Physical therapy with Ryan Fraley, DPT", "ssot": "atlas/health/pt-sessions-ryan.md", "cue": "health, recovery, rib, Ryan, appointment" },
+        { "sense": "Repo make targets pt-validate / pt-test-sync", "ssot": "=notes/CLAUDE.md (Local Overrides)", "cue": "backticked command, run, build, validate" }
+      ],
+      "ssot": "=notes/CLAUDE.md",
+      "resolution": "Resolve from context; state chosen sense in first line. Prefer surface name 'Neo' for the runtime sense."
+    },
+    {
+      "term": "OB1",
+      "meanings": [
+        { "sense": "Open Brain — cross-AI thought memory bus, Supabase pgvector, MCP 'open-brain'. NOT a vault search engine.", "ssot": "SESSION-CONTEXT.md", "cue": "capture, insight, thought, cross-AI" }
+      ],
+      "ssot": "SESSION-CONTEXT.md",
+      "resolution": "Use for thought/insight capture. If the operation is a vault search, flag the mismatch — that is OBn or Khoj, not OB1."
+    },
+    {
+      "term": "OBn",
+      "meanings": [
+        { "sense": "Obsidian Brain — semantic vault search index, ChromaDB v2, Ollama embeddings, read-only projection of the vault.", "ssot": "SESSION-CONTEXT.md", "cue": "semantic search, vault index, find notes" }
+      ],
+      "ssot": "SESSION-CONTEXT.md",
+      "resolution": "Use for broad semantic vault search. Distinct from OB1 (thought bus) and Khoj (interactive CLI surface)."
+    },
+    {
+      "term": "Khoj",
+      "meanings": [
+        { "sense": "Local self-hosted CLI/MCP vault-expert surface with curated context + preset agents. Reactivated 2026-05-11 at localhost:42110.", "ssot": "SESSION-CONTEXT.md", "cue": "khoj cli, vault-expert, preset agent" }
+      ],
+      "ssot": "SESSION-CONTEXT.md",
+      "resolution": "Live again as of 2026-05-11. knowledge-graph.jsonl historically claimed it was retired 2026-04-11 — that is stale; verify tool status against SESSION-CONTEXT.md."
+    },
+    {
+      "term": "runtime-vs-surface",
+      "meanings": [
+        { "sense": "Hermes (Nous Research runtime) <-> Wings (Discord surface, CC deployment lane)", "ssot": "~/Documents/Coordination/*-identity-mapping.md", "cue": "Hermes=process, Wings=chat surface" },
+        { "sense": "PT (Gemini CLI runtime) <-> Neo (Discord surface, dissent/overseer)", "ssot": "~/Documents/Coordination/*-identity-mapping.md", "cue": "PT=process, Neo=chat surface" },
+        { "sense": "OLIVIER_MBP (OpenClaw runtime) <-> Zoe (Discord surface, browser automation)", "ssot": "~/Documents/Coordination/*-identity-mapping.md", "cue": "OLIVIER_MBP=process, Zoe=chat surface" }
+      ],
+      "ssot": "~/Documents/Coordination/*-identity-mapping.md",
+      "resolution": "Before any dispatch, name the full runtime<->surface tuple back to Jack. Latest-modified identity-mapping file wins. Do NOT trust knowledge-graph.jsonl for fleet topology."
+    },
+    {
+      "term": "research",
+      "meanings": [
+        { "sense": "Gemini Deep Research — a 5-15 min paid research run", "ssot": "SESSION-CONTEXT.md", "cue": "default reading of 'research X'" },
+        { "sense": "MCP profile named 'research'", "ssot": "claude/config/mcp-profiles.json", "cue": "'cn -p research'" }
+      ],
+      "ssot": "SESSION-CONTEXT.md",
+      "resolution": "EXCEPTION: ask first. For bare 'research X', ask 'Gemini Deep Research, web search, or vault lookup?' before spending the expensive path."
+    },
+    {
+      "term": "work-item-homes",
+      "meanings": [
+        { "sense": "docs/plans/ — strategic cross-session plans", "ssot": "=notes/CLAUDE.md", "cue": "'make a plan'" },
+        { "sense": "efforts/current/ — active bandwidth-allocated work hubs", "ssot": "=notes/CLAUDE.md", "cue": "ongoing effort, hub" },
+        { "sense": "claude/tasks/active/ — atomic v2 task-queue items", "ssot": "priority-dashboard.md", "cue": "autonomous queue, AFK task" },
+        { "sense": "tasks/{personal,transition,job-search,portfolio}/ — personal Obsidian task lists", "ssot": "priority-dashboard.md", "cue": "personal/admin item" }
+      ],
+      "ssot": "=notes/CLAUDE.md",
+      "resolution": "State where you are filing it. Before quoting a work-state dashboard, check its 'updated:' frontmatter vs body 'Last refreshed' vs git log; flag drift instead of quoting stale state."
+    },
+    {
+      "term": "=notes",
+      "meanings": [
+        { "sense": "The Obsidian vault at /Users/jack.reis/Documents/=notes; leading '=' is zsh parameter-expansion", "ssot": "=notes/CLAUDE.md", "cue": "any vault path" }
+      ],
+      "ssot": "=notes/CLAUDE.md",
+      "resolution": "In tool calls use the fully-qualified absolute path (no escaping needed). Escape as ~/Documents/\\=notes only in shell commands handed to Jack."
+    },
+    {
+      "term": "n8n",
+      "meanings": [
+        { "sense": "Workflow-automation tool; the fleet's unified bus for webhook ingress and declarative routing", "ssot": "=notes/CLAUDE.md", "cue": "'trigger n8n', 'the n8n bus', webhook routing" },
+        { "sense": "NOT the 'n'/'cn' shell aliases (Claude Code) — they only share a prefix", "ssot": "SESSION-CONTEXT.md", "cue": "disambiguation note" }
+      ],
+      "ssot": "=notes/CLAUDE.md",
+      "resolution": "'n8n' always means the workflow engine, never a Claude Code session. Numeronym for 'nodemation'."
+    }
+  ],
+  "skill_collisions": [
+    {
+      "cluster": "session-start",
+      "skills": ["session-briefing", "ob1-session-briefing", "ledger-lifecycle", "session-lifecycle"],
+      "collision_phrase": "briefing, where was I",
+      "resolution": "ledger-lifecycle is the current unified entry. session-lifecycle is superseded — do not invoke."
+    },
+    {
+      "cluster": "drive-sharing",
+      "skills": ["vault-to-share", "vault-to-pdf", "vault-to-gdrive-set"],
+      "collision_phrase": "share to drive",
+      "resolution": "Public link -> vault-to-share. Editable review triad -> vault-to-gdrive-set. PDF only -> vault-to-pdf."
+    },
+    {
+      "cluster": "dashboard-sync",
+      "skills": ["dashboard-refresh", "gdrive-sync", "daily-metrics-sync"],
+      "collision_phrase": "sync dashboard",
+      "resolution": "Date math -> dashboard-refresh. Push out to Drive -> gdrive-sync. Pull daily data into dashboard -> daily-metrics-sync."
+    }
+  ]
+}

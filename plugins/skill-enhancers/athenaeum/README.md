@@ -14,15 +14,14 @@ npx skills add athenaeum-org/dancer@athenaeum-ratify
 
 Or clone and symlink into your agent's `skills/` directory.
 
-## Three skills, one lineage
+## Four skills, one lineage
 
 | Skill | Purpose | When to use |
 |---|---|---|
-| `athenaeum-design` | Rigorous design grilling | Designing agents, architectures, plans |
-| `athenaeum-reconcile` | Multi-agent state reconciliation | Two+ agents disagree; triangulate across models |
-| `athenaeum-ratify` | Fleet attestation with dissent recording | N agents must sign off on an immutable artifact |
-
-| `athenaeum-audit` | Code-aware agent-stack audit + reconcile in one pass | Reviewing existing architecture; triangulate understanding |
+| `athenaeum-design`  | Rigorous design grilling                          | Designing agents, architectures, plans |
+| `athenaeum-reconcile`| Multi-agent state reconciliation                   | Two+ agents disagree; triangulate across models |
+| `athenaeum-ratify`  | Fleet attestation with dissent recording          | N agents must sign off on an immutable artifact |
+| `athenaeum-audit`   | Code-aware agent-stack audit + reconcile in one pass | Reviewing existing architecture; triangulate understanding |
 
 ## Quick decision tree
 
@@ -49,6 +48,15 @@ athenaeum init my-topic --mode reconcile
 athenaeum init my-topic --mode ratify --roster agent-alpha,agent-beta,agent-gamma
 athenaeum init my-topic --mode audit
 
+```
+
+## Framework Name
+
+This repo surface is `Athenaeum` (the plugin pack), but the public framework shorthand is **lowercase `rbitr`** to avoid collisions with a separate Clawhub `Arbiter` skill and potential Kimi naming conflicts. Historical references to `Arbiter` in prose should be read as `rbitr`.
+
+## Unified CLI commands
+
+```bash
 athenaeum diff my-topic
 athenaeum sign my-topic
 athenaeum check          # find ratifications awaiting your vote
@@ -68,10 +76,12 @@ athenaeum/
 ├── athenaeum-design/SKILL.md
 ├── athenaeum-reconcile/SKILL.md
 ├── athenaeum-ratify/SKILL.md
-├── REFERENCE.md           # Deep protocol for all three
+├── athenaeum-audit/SKILL.md
+├── REFERENCE.md           # Deep protocol for all four
 ├── scripts/
 │   └── athenaeum          # Unified bootstrap CLI
 └── templates/
+    ├── audit/
     ├── design/
     ├── reconcile/
     └── ratify/
