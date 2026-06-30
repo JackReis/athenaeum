@@ -20,6 +20,7 @@
   "keywords": [
     "dialectic",
     "athenaeum",
+    "rbitr",
     "design-review",
     "reconciliation",
     "ratification",
@@ -28,6 +29,9 @@
     "agent-topology",
     "multi-agent",
     "skill-enhancer",
-    "byom"
+    "byom",
+    "a2a",
+    "cross-agent",
+    "agentic-compatibility"
   ]
 }

@@ -10,6 +10,7 @@ A dialectic skill pack for agent design, multi-agent reconciliation, and fleet-w
 npx skills add athenaeum-org/dancer@athenaeum-design
 npx skills add athenaeum-org/dancer@athenaeum-reconcile
 npx skills add athenaeum-org/dancer@athenaeum-ratify
+npx skills add athenaeum-org/dancer@athenaeum-audit
 ```
 
 Or clone and symlink into your agent's `skills/` directory.

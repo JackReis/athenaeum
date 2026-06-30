@@ -1,6 +1,6 @@
 # Athenaeum — Reference
 
-Deep protocol docs for the three Athenaeum skills. Agents should read the relevant section only when executing that mode, not during skill selection.
+Deep protocol docs for the four Athenaeum skills. Agents should read the relevant section only when executing that mode, not during skill selection.
 
 ---
 
